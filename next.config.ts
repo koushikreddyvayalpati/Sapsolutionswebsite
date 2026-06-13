@@ -8,7 +8,8 @@ const nextConfig: NextConfig = {
   assetPrefix: isGitHubPages ? "/Sapsolutionswebsite/" : undefined,
   trailingSlash: true,
   images: {
-    unoptimized: isGitHubPages,
+    loader: isGitHubPages ? "custom" : "default",
+    loaderFile: isGitHubPages ? "./src/imageLoader.ts" : undefined,
   },
 };
 
