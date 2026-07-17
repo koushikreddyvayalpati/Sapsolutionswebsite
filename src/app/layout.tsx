@@ -17,13 +17,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SAP Global ServiceTech | Enterprise SAP Solutions",
+  title: "UtilityNexus.ai | SAP Services for Utilities",
   description:
-    "End-to-end SAP consulting, implementation and managed services for global enterprises — from S/4HANA to Agentic AI. SAP Gold Partner, ISO 27001 certified, 30+ countries.",
+    "SAP ECC to S/4HANA upgrades, AMS resources, implementation governance and SAP IS-U health assessments for utilities.",
   openGraph: {
-    title: "SAP Global ServiceTech | Enterprise SAP Solutions",
+    title: "UtilityNexus.ai | SAP Services for Utilities",
     description:
-      "End-to-end SAP consulting, implementation and managed services for global enterprises.",
+      "Utilities-focused SAP upgrades, AMS, project governance and POWERON health assessments.",
     type: "website",
   },
 };

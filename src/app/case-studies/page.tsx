@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 import { CaseStudies, Testimonials } from "@/components/Sections";
 
 export const metadata: Metadata = {
-  title: "SAP Case Studies | SAP Global",
+  title: "SAP Case Studies | UtilityNexus.ai",
   description:
     "Enterprise SAP transformation case studies and client outcomes across energy, utilities, manufacturing and AI operations.",
 };

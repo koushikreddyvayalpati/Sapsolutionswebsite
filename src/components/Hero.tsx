@@ -12,23 +12,23 @@ export default function Hero() {
         <div className="hero-lft">
           <p className="hero-eyebrow">
             <Icon name="shield" size={11} strokeWidth={2.5} />
-            Enterprise SAP transformation partner
+            Utilities-focused SAP delivery partner
           </p>
           <h1>
-            SAP modernization for
-            <span className="h1-accent"> regulated</span> enterprises.
+            Make SAP work better for
+            <span className="h1-accent"> utilities.</span>
           </h1>
           <p className="hero-sub">
-            We design, implement, migrate and operate SAP landscapes for regulated global teams,
-            from S/4HANA and BTP to agentic AI workflows.
+            Upgrade ECC to S/4HANA, strengthen application support, govern implementation scope
+            and uncover SAP IS-U risks before they affect customers or operations.
           </p>
           <div className="hero-btns">
-            <a href="#contact" className="hbtn-p">
-              Book an SAP Assessment
+            <Link href="/services#poweron" className="hbtn-p">
+              Get a Free POWERON Health Check
               <Icon name="arrow" size={14} strokeWidth={2.5} />
-            </a>
-            <Link href="/solutions" className="hbtn-s">
-              View Solutions
+            </Link>
+            <Link href="/services" className="hbtn-s">
+              Explore Services
               <Icon name="arrow" size={14} strokeWidth={2.5} />
             </Link>
           </div>
@@ -56,12 +56,12 @@ export default function Hero() {
             />
           </div>
           <div className="dash-badge">
-            <div className="db-v">+38%</div>
-            <div className="db-l">Cost reduction delivered</div>
+            <div className="db-v">4</div>
+            <div className="db-l">Focused SAP services</div>
           </div>
           <div className="hero-glass-note">
             <span className="dash-dot" />
-            Live migration governance
+            SAP IS-U health and delivery governance
           </div>
         </div>
       </div>

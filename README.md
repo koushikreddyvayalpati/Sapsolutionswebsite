@@ -1,6 +1,6 @@
 # Sapsolutionswebsite
 
-SAP Global ServiceTech marketing website built with Next.js.
+UtilityNexus.ai marketing website built with Next.js.
 
 ## Getting Started
 

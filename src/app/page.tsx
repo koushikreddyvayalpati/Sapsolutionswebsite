@@ -7,7 +7,6 @@ import {
   VisualProof,
   WhyUs,
 } from "@/components/Sections";
-import { WHY_METRICS } from "@/data/site";
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
         <Hero />
         <VisualProof />
         <Services />
-        <WhyUs metrics={WHY_METRICS} />
+        <WhyUs />
         <Contact />
       </main>
       <Footer />

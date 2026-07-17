@@ -10,21 +10,8 @@ import {
   TEAM,
   TESTIMONIALS,
   TRUST_BADGES,
-  WHY_KPIS,
   WHY_POINTS,
 } from "@/data/site";
-
-const SERVICE_IMAGES = [
-  "/enterprise-sap-hero.png",
-  "/solutions-assessment.png",
-  "/case-utilities.png",
-  "/sap-managed-ops.png",
-  "/solutions-hero.png",
-  "/case-energy.png",
-  "/sap-cloud-team.png",
-  "/case-utilities.png",
-  "/case-ai-manufacturing.png",
-];
 
 /* ── Trust band ── */
 export function TrustBand() {
@@ -79,8 +66,8 @@ export function SectionHeader({
 
 /* ── Services ── */
 export function Services({
-  title = "Browse SAP Services",
-  sub = "Swipe through focused service cards. Each one opens the matching solution detail without forcing a long page scan.",
+  title = "Four services. One accountable SAP partner.",
+  sub = "Upgrade, support, govern or assess your SAP landscape with utilities-focused specialists.",
 }: {
   title?: string;
   sub?: string;
@@ -93,25 +80,25 @@ export function Services({
         sub={sub}
       />
       <Reveal className="svc-wrap">
-        <div className="svc-rail" aria-label="Horizontally scrollable SAP service cards">
+        <div className="svc-rail" aria-label="UtilityNexus.ai SAP services">
           {SERVICES.map((s, i) => (
             <Link
               key={s.slug}
-              href={`/solutions#${s.slug}`}
+              href={s.href}
               className={`svc-card${s.isNew ? " svc-ai" : ""}`}
             >
               <span className="svc-img">
                 <Image
-                  src={SERVICE_IMAGES[i % SERVICE_IMAGES.length]}
+                  src={s.image}
                   width={1672}
                   height={941}
-                  alt={`${s.title} delivery preview`}
+                  alt={`${s.title} delivery team`}
                   sizes="(max-width: 900px) 82vw, 340px"
                 />
               </span>
               <span className="svc-card-top">
                 <span className="svc-n">{String(i + 1).padStart(2, "0")}</span>
-                {s.isNew && <span className="ai-new">New</span>}
+                {s.isNew && <span className="ai-new">Free assessment</span>}
               </span>
               <span className="svc-mid">
                 <h4>{s.title}</h4>
@@ -134,7 +121,7 @@ export function Services({
           <Link href="/services" className="text-link">
             View service page <Icon name="arrow" size={13} strokeWidth={2.5} />
           </Link>
-          <span>Scroll sideways to compare services</span>
+          <span>Four focused ways to improve SAP delivery and operations</span>
         </div>
       </Reveal>
     </section>
@@ -146,16 +133,17 @@ export function VisualProof() {
   return (
     <section className="visual-proof" aria-labelledby="visual-proof-title">
       <div className="vp-copy">
-        <span className="stag">Delivery Proof</span>
-        <h2 id="visual-proof-title">Real SAP delivery teams, not generic consulting decks.</h2>
+        <span className="stag">Utilities Delivery Focus</span>
+        <h2 id="visual-proof-title">SAP decisions grounded in how utilities actually operate.</h2>
         <p>
-          We combine architecture, migration execution and managed operations in one delivery
-          motion, so stakeholders see progress, risk and value in the same operating rhythm.
+          UtilityNexus.ai connects SAP architecture and delivery with meter-to-cash, billing,
+          customer service and operational support. That context helps teams prioritize the risks
+          that matter and make changes with less disruption.
         </p>
         <div className="vp-points">
-          <span>Landscape assessment</span>
-          <span>Migration governance</span>
-          <span>24/7 operations</span>
+          <span>ECC to S/4HANA</span>
+          <span>Implementation governance</span>
+          <span>SAP IS-U health</span>
         </div>
       </div>
       <div className="vp-images">
@@ -167,7 +155,7 @@ export function VisualProof() {
             alt="SAP consultants reviewing cloud migration architecture in a modern office"
             sizes="(max-width: 900px) 92vw, 48vw"
           />
-          <figcaption>SAP migration planning</figcaption>
+          <figcaption>S/4HANA upgrade planning</figcaption>
         </figure>
         <figure className="vp-img secondary">
           <Image
@@ -177,7 +165,7 @@ export function VisualProof() {
             alt="Enterprise support team monitoring SAP managed services and analytics"
             sizes="(max-width: 900px) 72vw, 24vw"
           />
-          <figcaption>Managed operations</figcaption>
+          <figcaption>SAP AMS operations</figcaption>
         </figure>
       </div>
     </section>
@@ -185,13 +173,31 @@ export function VisualProof() {
 }
 
 /* ── Why Us ── */
-export function WhyUs({ metrics }: { metrics: { label: string; value: number }[] }) {
+const ENGAGEMENT_STEPS = [
+  {
+    number: "01",
+    title: "Understand the landscape",
+    body: "Start with the current SAP architecture, operating process, delivery constraints and business risk.",
+  },
+  {
+    number: "02",
+    title: "Prioritize what matters",
+    body: "Separate urgent stability issues, quick wins and structural changes into a clear sequence.",
+  },
+  {
+    number: "03",
+    title: "Deliver with control",
+    body: "Use visible scope, decisions, ownership and outcomes from assessment through support.",
+  },
+] as const;
+
+export function WhyUs() {
   return (
     <section className="sec alt" id="why-us">
       <SectionHeader
         tag="Why Choose Us"
-        title="Built exclusively for enterprise SAP"
-        sub="SAP is all we do. That singular focus makes us the most capable SAP partner your enterprise will work with."
+        title="Utilities context. SAP delivery discipline."
+        sub="A lean specialist team spanning assessment, governance, transformation and ongoing application support."
       />
       <div className="why-grid">
         <Reveal variant="left" className="why-pts">
@@ -203,7 +209,7 @@ export function WhyUs({ metrics }: { metrics: { label: string; value: number }[]
               alt="SAP consultants prioritizing enterprise transformation roadmap in a workshop"
               sizes="(max-width: 900px) 92vw, 42vw"
             />
-            <figcaption>Senior SAP architects on every engagement</figcaption>
+            <figcaption>Utilities and SAP specialists working as one team</figcaption>
           </figure>
           <div className="why-list">
             {WHY_POINTS.map((p) => (
@@ -220,32 +226,23 @@ export function WhyUs({ metrics }: { metrics: { label: string; value: number }[]
           </div>
         </Reveal>
         <Reveal variant="right" className="why-panel">
-          <p className="wp-ttl">SAP Delivery Performance</p>
-          {metrics.map((m) => (
-            <div className="wp-m" key={m.label}>
-              <div className="wp-mh">
-                <span>{m.label}</span>
-                <span className="wp-pct">{m.value}%</span>
-              </div>
-              <div
-                className="wp-track"
-                role="progressbar"
-                aria-valuenow={m.value}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-label={m.label}
-              >
-                <div className="wp-fill" style={{ "--w": `${m.value}%` } as React.CSSProperties} />
-              </div>
-            </div>
-          ))}
-          <div className="wp-kpis">
-            {WHY_KPIS.map((k) => (
-              <div className="wpk" key={k.label}>
-                <div className="wpkv">{k.value}</div>
-                <div className="wpkl">{k.label}</div>
+          <p className="wp-ttl">How We Engage</p>
+          <div className="engagement-steps">
+            {ENGAGEMENT_STEPS.map((step) => (
+              <div className="engagement-step" key={step.number}>
+                <span>{step.number}</span>
+                <div>
+                  <h4>{step.title}</h4>
+                  <p>{step.body}</p>
+                </div>
               </div>
             ))}
+          </div>
+          <div className="engagement-scope" aria-label="UtilityNexus.ai service lifecycle">
+            <span>Assess</span>
+            <span>Govern</span>
+            <span>Upgrade</span>
+            <span>Support</span>
           </div>
         </Reveal>
       </div>

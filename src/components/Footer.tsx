@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="ft-top">
         <div className="ft-brand">
           <div className="ft-logo">
-            <span className="ftlm">SG</span>
+            <span className="ftlm">UN</span>
             {SITE.name}
           </div>
           <p>{SITE.tagline}</p>
@@ -75,9 +75,9 @@ export default function Footer() {
       <div className="ft-bot">
         <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
         <div className="ft-bgs">
-          <span className="ftbg">SAP Gold Partner</span>
-          <span className="ftbg">ISO 27001</span>
-          <span className="ftbg">GDPR Compliant</span>
+          <span className="ftbg">SAP IS-U</span>
+          <span className="ftbg">ECC to S/4HANA</span>
+          <span className="ftbg">POWERON</span>
         </div>
       </div>
     </footer>

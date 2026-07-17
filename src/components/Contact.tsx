@@ -20,20 +20,20 @@ export default function Contact() {
     <section className="sec alt" id="contact">
       <Reveal className="shdr">
         <span className="stag">Contact Us</span>
-        <h2>Let&rsquo;s Start Your SAP Journey</h2>
-        <p>Speak to a specialist about your enterprise transformation goals.</p>
+        <h2>Start with the SAP issue that matters now.</h2>
+        <p>Speak directly with a utilities and SAP delivery specialist.</p>
       </Reveal>
       <div className="con-grid">
         <Reveal variant="left" className="con-lft">
-          <h3>Talk to an SAP Expert</h3>
+          <h3>Talk to UtilityNexus.ai</h3>
           <p>
-            Whether planning an S/4HANA programme, needing managed services, or exploring Agentic AI
-            — we are ready.
+            Tell us whether you are planning an ECC upgrade, filling an AMS skills gap, governing an
+            implementation or reviewing SAP IS-U health.
           </p>
           <div className="con-proof" aria-label="Consultation assurances">
-            <span>48h response</span>
+            <span>Specialist response</span>
             <span>NDA-ready</span>
-            <span>Architecture-led</span>
+            <span>Utilities-aware</span>
           </div>
           {CONTACT_INFO.map((c) => (
             <div className="con-row" key={c.label}>
@@ -48,7 +48,7 @@ export default function Contact() {
           ))}
         </Reveal>
         <Reveal variant="right" as="form" className="con-form" onSubmit={handleSubmit}>
-          <h4>Request a Free Consultation</h4>
+          <h4>Request a Consultation</h4>
           <div className="fg">
             <div className="ff">
               <label htmlFor="c-first">First Name</label>
@@ -105,7 +105,7 @@ export default function Contact() {
               <textarea
                 id="c-msg"
                 name="message"
-                placeholder="Describe your SAP transformation goals, current landscape, and timeline…"
+                placeholder="Describe your SAP landscape, the current issue and the outcome you need…"
               />
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Contact() {
             {!submitted && <Icon name="arrow" size={13} strokeWidth={2.5} />}
           </button>
           <p className="form-note">
-            No sales handoff. Your request goes directly to an SAP solution architect.
+            Your request goes directly to a utilities and SAP delivery specialist.
           </p>
         </Reveal>
       </div>

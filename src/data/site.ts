@@ -1,7 +1,7 @@
 export const SITE = {
-  name: "SAP Global",
+  name: "UtilityNexus.ai",
   tagline:
-    "Enterprise SAP solutions, consulting and managed services for the world's most demanding organisations. SAP Gold Partner.",
+    "SAP delivery and utilities expertise for upgrades, application support, project governance and operational health.",
 };
 
 export const NAV_LINKS = [
@@ -10,14 +10,14 @@ export const NAV_LINKS = [
   { label: "Case Studies", href: "/case-studies" },
 ];
 
-export const HERO_TRUST = ["SAP Gold Partner", "ISO 27001 Certified", "30+ Countries"];
+export const HERO_TRUST = ["ECC to S/4HANA", "SAP AMS", "Utilities & SAP IS-U"];
 
 export const TRUST_BADGES = [
-  { icon: "shield", label: "SAP Gold Partner" },
-  { icon: "lock", label: "ISO 27001 Certified" },
-  { icon: "pulse", label: "SAP Activate Certified" },
-  { icon: "globe", label: "30+ Countries Delivered" },
-  { icon: "check", label: "GDPR Compliant" },
+  { icon: "pulse", label: "ECC to S/4HANA Upgrades" },
+  { icon: "team", label: "Skilled SAP AMS Resources" },
+  { icon: "shield", label: "Implementation Governance" },
+  { icon: "bolt", label: "SAP IS-U Expertise" },
+  { icon: "check", label: "Free POWERON Health Check" },
 ] as const;
 
 export const CLIENTS = [
@@ -40,112 +40,115 @@ export interface Service {
   title: string;
   description: string;
   chips: string[];
+  href: string;
+  image: string;
+  outcome: string;
+  deliverables: string[];
   isNew?: boolean;
 }
 
 export const SERVICES: Service[] = [
   {
-    slug: "s1",
-    title: "SAP S/4HANA Implementation",
+    slug: "sap-upgrades",
+    title: "SAP ECC to S/4HANA Upgrades",
     description:
-      "Full-cycle greenfield and brownfield S/4HANA deployments for complex, multi-entity global enterprises.",
-    chips: ["Greenfield", "Brownfield", "Finance", "Supply Chain", "SAP Activate"],
+      "Plan and execute a controlled move from SAP ECC to S/4HANA with clear readiness, data, custom-code and cutover decisions.",
+    chips: ["Readiness", "System Conversion", "Data Migration", "Cutover"],
+    href: "/solutions#s6",
+    image: "/sap-cloud-team.png",
+    outcome: "A phased upgrade roadmap that protects business continuity and makes risk visible early.",
+    deliverables: [
+      "ECC landscape and S/4HANA readiness assessment",
+      "Custom-code, integration and data remediation plan",
+      "Conversion, testing, cutover and hypercare governance",
+    ],
   },
   {
-    slug: "s2",
-    title: "SAP ERP Consulting",
+    slug: "sap-ams",
+    title: "SAP AMS & Skilled Resources",
     description:
-      "Strategic advisory and process re-engineering — aligning technology roadmaps with long-term business objectives.",
-    chips: ["Blueprint", "Process Optimization", "TCO Reduction", "Governance"],
+      "Keep SAP stable and responsive with experienced functional, technical and utilities specialists who fit your operating model.",
+    chips: ["Production Support", "Enhancements", "Flexible Staffing", "SAP IS-U"],
+    href: "/solutions#s4",
+    image: "/sap-managed-ops.png",
+    outcome: "The right SAP expertise when it is needed, without carrying an oversized permanent support team.",
+    deliverables: [
+      "Incident, problem and service-request support",
+      "Functional and technical resources matched to demand",
+      "Minor enhancements, monitoring and knowledge retention",
+    ],
   },
   {
-    slug: "s3",
-    title: "SAP Analytics & Business Intelligence",
+    slug: "implementation-governance",
+    title: "SAP Implementation Governance",
     description:
-      "Real-time enterprise intelligence with SAP Analytics Cloud and BW/4HANA — data-driven decisions at every level.",
-    chips: ["SAP Analytics Cloud", "BW/4HANA", "Predictive", "FP&A"],
+      "Independent project governance that keeps SAP implementation scope, decisions, delivery quality, schedule and budget under control.",
+    chips: ["PMO", "Scope Control", "Budget", "Quality Gates"],
+    href: "/solutions#s1",
+    image: "/enterprise-sap-hero.png",
+    outcome: "A transparent delivery model with accountable decisions and fewer late surprises.",
+    deliverables: [
+      "Programme governance, stage gates and decision rights",
+      "Scope, budget, schedule, risk and dependency oversight",
+      "Vendor coordination, quality assurance and executive reporting",
+    ],
   },
   {
-    slug: "s4",
-    title: "SAP Support & Managed Services",
+    slug: "poweron",
+    title: "SAP Utilities Health Assessment",
     description:
-      "24/7 enterprise application management with <15-min incident response and bulletproof SLAs.",
-    chips: ["24/7 Monitoring", "SLA-Backed", "Basis Admin", "Security"],
-  },
-  {
-    slug: "s5",
-    title: "SAP Integration",
-    description:
-      "API-led connectivity linking SAP to Salesforce, Oracle, IoT platforms and custom systems — 99.98% delivery reliability.",
-    chips: ["SAP Integration Suite", "API Management", "Event Mesh", "EDI/B2B"],
-  },
-  {
-    slug: "s6",
-    title: "SAP Migration & Upgrades",
-    description:
-      "ECC to S/4HANA migration with zero data loss — automated tooling and phased cutover for complex landscapes.",
-    chips: ["ECC → S/4HANA", "System Conversion", "SAP DMO", "Data Migration"],
-  },
-  {
-    slug: "s7",
-    title: "SAP Cloud Solutions",
-    description:
-      "RISE with SAP, private cloud and hybrid architectures on Azure, AWS and GCP — optimised for compliance, performance and cost.",
-    chips: ["RISE with SAP", "Private Cloud", "Azure / AWS / GCP", "FinOps"],
-  },
-  {
-    slug: "s8",
-    title: "SAP BTP (Business Technology Platform)",
-    description:
-      "Extend, integrate and innovate on BTP — custom apps, workflow automation and HANA Cloud at enterprise scale.",
-    chips: ["BTP Build", "HANA Cloud", "Workflow", "Low-Code"],
-  },
-  {
-    slug: "s9",
-    title: "SAP with Agentic AI",
-    description:
-      "Autonomous AI agents embedded in SAP — zero-touch procurement, predictive maintenance and self-healing operations on SAP AI Core.",
-    chips: ["Zero-Touch Procurement", "SAP Joule", "AI Core", "Self-Healing Ops"],
+      "Find stability, process and upgrade risks across SAP IS-U and meter-to-cash before they become production issues.",
+    chips: ["Free Health Check", "SAP IS-U", "Meter to Cash", "Risk Roadmap"],
+    href: "/services#poweron",
+    image: "/case-utilities.png",
+    outcome: "A prioritized, practical improvement roadmap built around utilities operations and SAP best practices.",
+    deliverables: [
+      "SAP IS-U configuration and meter-to-cash review",
+      "Workflow, program, report and enhancement assessment",
+      "Risk register, quick wins and upgrade-readiness roadmap",
+    ],
     isNew: true,
   },
 ];
 
+export const POWERON = {
+  name: "POWERON",
+  eyebrow: "Free SAP Utilities Health Check",
+  title: "See what is putting your SAP IS-U landscape at risk.",
+  description:
+    "POWERON is UtilityNexus.ai's structured health assessment for utilities. It reviews the decisions, workarounds and processing errors that accumulate after go-live, then turns the findings into a prioritized stabilization and modernization plan.",
+  areas: [
+    "Meter-to-cash process integrity",
+    "Billing, invoicing and exception handling",
+    "Interfaces, custom programs and reports",
+    "Workflows, enhancements and operational controls",
+    "Knowledge gaps and support dependencies",
+    "Upgrade readiness and remediation priorities",
+  ],
+} as const;
+
 export const WHY_POINTS = [
   {
     icon: "shield",
-    title: "Enterprise-Proven Methodology",
-    body: "SAP Activate and ASAP-certified delivery frameworks tested across 200+ enterprise deployments in the world's most regulated industries.",
+    title: "Utilities-First SAP Expertise",
+    body: "Deep SAP IS-U and meter-to-cash knowledge connects system decisions to the operational realities of utility service, billing and customer care.",
   },
   {
-    icon: "pulse",
-    title: "AI-First SAP Innovation",
-    body: "Pioneering Agentic AI within SAP — autonomous agents, predictive analytics and self-healing operations at enterprise scale.",
-  },
-  {
-    icon: "globe",
-    title: "Global Delivery, Local Expertise",
-    body: "30+ countries served with deep vertical expertise in Oil & Gas, Utilities and Energy — the industries that power the global economy.",
+    icon: "check",
+    title: "Practical Delivery Methods",
+    body: "Time-tested assessment, governance and support practices keep teams focused on the issues that affect stability, cost and delivery confidence.",
   },
   {
     icon: "team",
-    title: "Dedicated Client Success Teams",
-    body: "Assigned architects, project managers and support engineers from discovery through go-live and beyond.",
+    title: "Lean, Skilled Teams",
+    body: "Experienced functional and technical specialists are aligned to the work required, reducing unnecessary consulting layers and preserving knowledge.",
+  },
+  {
+    icon: "pulse",
+    title: "From Assessment to Operations",
+    body: "One partner can assess the landscape, govern implementation, execute upgrades and support the system after go-live.",
   },
 ] as const;
-
-export const WHY_METRICS = [
-  { label: "Implementation Excellence", value: 98 },
-  { label: "On-Time Go-Live Rate", value: 96 },
-  { label: "Client Retention Rate", value: 94 },
-  { label: "Avg. Cost Optimisation", value: 38 },
-];
-
-export const WHY_KPIS = [
-  { value: "200+", label: "Active Clients" },
-  { value: "50+", label: "SAP Experts" },
-  { value: "15+", label: "Years Focus" },
-  { value: "30+", label: "Countries" },
-];
 
 export const INDUSTRIES = [
   {
@@ -219,7 +222,7 @@ export const CASE_STUDIES = [
 export const TESTIMONIALS = [
   {
     quote:
-      "SAP Global ServiceTech delivered our S/4HANA transformation on time and on budget — something we were told was impossible. Their SAP depth is genuinely unmatched.",
+      "UtilityNexus.ai delivered our S/4HANA transformation on time and on budget — something we were told was impossible. Their SAP depth is genuinely unmatched.",
     initials: "RK",
     name: "Rajiv Kumar",
     role: "CIO, Global Energy Corp",
@@ -249,8 +252,8 @@ export const TEAM = [
 
 export const FAQS = [
   {
-    q: "What makes SAP Global ServiceTech different from other SAP partners?",
-    a: "We combine 15+ years of pure-SAP focus with frontier Agentic AI and BTP. SAP is all we do — there's no generic IT practice diluting our expertise or delivery quality.",
+    q: "What makes UtilityNexus.ai different from other SAP partners?",
+    a: "We combine utilities process knowledge with practical SAP delivery. Our focus is the work that protects outcomes: upgrades, application support, implementation governance and health assessment.",
   },
   {
     q: "How long does an SAP S/4HANA implementation take?",
@@ -271,9 +274,9 @@ export const FAQS = [
 ];
 
 export const CONTACT_INFO = [
-  { icon: "phone", label: "Phone", value: "+1 (800) SAP-GLOBAL" },
-  { icon: "mail", label: "Email", value: "enterprise@sapglobalservicetech.com" },
-  { icon: "pin", label: "Offices", value: "Dubai · London · Houston · Singapore" },
+  { icon: "mail", label: "Email", value: "hello@utilitynexus.ai" },
+  { icon: "globe", label: "Website", value: "utilitynexus.ai" },
+  { icon: "bolt", label: "Utilities Focus", value: "SAP IS-U · Meter to Cash · S/4HANA" },
 ] as const;
 
 export const FOOTER_COLS = [
@@ -281,10 +284,10 @@ export const FOOTER_COLS = [
     title: "Services",
     links: [
       { label: "All Services", href: "/services" },
-      { label: "S/4HANA Implementation", href: "/solutions#s1" },
-      { label: "Analytics & BI", href: "/solutions#s3" },
-      { label: "SAP BTP", href: "/solutions#s8" },
-      { label: "Agentic AI", href: "/solutions#s9" },
+      { label: "ECC to S/4HANA", href: "/solutions#s6" },
+      { label: "SAP AMS", href: "/solutions#s4" },
+      { label: "Implementation Governance", href: "/solutions#s1" },
+      { label: "Free POWERON Health Check", href: "/services#poweron" },
     ],
   },
   {

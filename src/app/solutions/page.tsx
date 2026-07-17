@@ -11,7 +11,7 @@ import SideDots from "@/components/solutions/SideDots";
 import "./solutions.css";
 
 export const metadata: Metadata = {
-  title: "SAP Solutions | SAP Global ServiceTech",
+  title: "SAP Solutions | UtilityNexus.ai",
   description:
     "Nine SAP solution areas, expertly delivered — S/4HANA implementation, ERP consulting, analytics, managed services, integration, migration, cloud, BTP and Agentic AI.",
 };
@@ -117,7 +117,7 @@ export default function SolutionsPage() {
           </div>
         </header>
 
-        <section className="solution-value-strip" aria-label="How SAP Global helps buyers decide">
+        <section className="solution-value-strip" aria-label="How UtilityNexus.ai helps buyers decide">
           <figure className="solution-value-photo">
             <Image
               src="/solutions-assessment.png"

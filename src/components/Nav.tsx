@@ -18,11 +18,11 @@ export default function Nav() {
       <nav className="nav" aria-label="Main navigation">
         <Link href="/" className="logo">
           <span className="lmark" aria-hidden="true">
-            <span>SG</span>
+            <span>UN</span>
           </span>
           <span className="logo-copy">
             <strong>{SITE.name}</strong>
-            <small>Enterprise SAP Partner</small>
+            <small>Utilities + SAP</small>
           </span>
         </Link>
         <ul className="nl">

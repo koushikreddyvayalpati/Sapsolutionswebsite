@@ -1,30 +1,46 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 import Nav from "@/components/Nav";
-import { Services } from "@/components/Sections";
+import { PowerOnAssessment, ServiceDetails } from "@/components/ServiceDetails";
 
 export const metadata: Metadata = {
-  title: "SAP Services | SAP Global",
+  title: "SAP Services for Utilities | UtilityNexus.ai",
   description:
-    "Browse SAP Global services across S/4HANA, BTP, analytics, managed services, integration, migration, cloud and agentic AI.",
+    "ECC to S/4HANA upgrades, SAP AMS resources, implementation governance and the free POWERON SAP IS-U health assessment.",
 };
 
 export default function ServicesPage() {
   return (
     <>
       <Nav />
-      <main id="main" className="services-lean">
-        <section className="page-hero light-hero">
-          <span className="stag">Services</span>
-          <h1>Pick the SAP service you need.</h1>
+      <main id="main" className="services-page">
+        <section className="page-hero light-hero services-hero">
+          <span className="stag">UtilityNexus.ai Services</span>
+          <h1>Focused SAP services for utilities and regulated operations.</h1>
           <p>
-            A lean catalog of the work we deliver. Open a card for the full solution detail.
+            Move from ECC to S/4HANA, strengthen application support, govern implementation
+            delivery or uncover SAP IS-U risks with POWERON.
           </p>
+          <div className="services-hero-actions">
+            <Link href="#poweron" className="hbtn-p">
+              Get the Free POWERON Health Check
+              <Icon name="arrow" size={14} strokeWidth={2.5} />
+            </Link>
+            <Link href="/#contact" className="hbtn-s">
+              Talk to a Specialist
+            </Link>
+          </div>
+          <nav className="service-jump" aria-label="Jump to a service">
+            <Link href="#sap-upgrades">ECC to S/4HANA</Link>
+            <Link href="#sap-ams">SAP AMS</Link>
+            <Link href="#implementation-governance">Project Governance</Link>
+            <Link href="#poweron">POWERON Health Check</Link>
+          </nav>
         </section>
-        <Services
-          title="Core SAP capabilities"
-          sub="Select a service to view the delivery model, outcomes and proof."
-        />
+        <ServiceDetails />
+        <PowerOnAssessment />
       </main>
       <Footer />
     </>
