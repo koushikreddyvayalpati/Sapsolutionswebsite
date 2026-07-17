@@ -10,10 +10,25 @@ const COMPANY_SIZES = ["500–1,000", "1,000–5,000", "5,000–20,000", "20,000
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent<HTMLElement>) {
     e.preventDefault();
-    // Wire this to your CRM / email service endpoint.
+    const form = new FormData(e.currentTarget as HTMLFormElement);
+    const service = String(form.get("service") || "SAP services");
+    const subject = encodeURIComponent(`UtilityNexus.ai enquiry: ${service}`);
+    const body = encodeURIComponent(
+      [
+        `Name: ${form.get("firstName") || ""} ${form.get("lastName") || ""}`,
+        `Business email: ${form.get("email") || ""}`,
+        `Company: ${form.get("company") || ""}`,
+        `Company size: ${form.get("size") || ""}`,
+        `Service: ${service}`,
+        "",
+        String(form.get("message") || ""),
+      ].join("\n"),
+    );
+
     setSubmitted(true);
+    window.location.href = `mailto:hello@utilitynexus.ai?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -110,11 +125,11 @@ export default function Contact() {
             </div>
           </div>
           <button type="submit" className="sbtn" disabled={submitted}>
-            {submitted ? "Request Received — We'll Be In Touch" : "Submit Request"}
+            {submitted ? "Opening Your Email App…" : "Prepare Email Request"}
             {!submitted && <Icon name="arrow" size={13} strokeWidth={2.5} />}
           </button>
           <p className="form-note">
-            Your request goes directly to a utilities and SAP delivery specialist.
+            This opens a pre-filled message in your email app so you can review it before sending.
           </p>
         </Reveal>
       </div>
