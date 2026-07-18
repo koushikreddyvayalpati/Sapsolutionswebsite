@@ -19,11 +19,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "UtilityNexus.ai | SAP Services for Utilities",
   description:
-    "SAP ECC to S/4HANA upgrades, AMS resources, implementation governance and SAP IS-U health assessments for utilities.",
+    "SAP ECC to S/4HANA upgrades, AMS resources, implementation governance, SAP BTP and AI-agent advisory, and SAP IS-U health assessments for utilities.",
   openGraph: {
     title: "UtilityNexus.ai | SAP Services for Utilities",
     description:
-      "Utilities-focused SAP upgrades, AMS, project governance and POWERON health assessments.",
+      "Utilities-focused SAP upgrades, AMS, project governance, BTP + AI and POWERON health assessments.",
     type: "website",
   },
 };

@@ -2,13 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
+import ServiceShowcase from "./ServiceShowcase";
 import {
   CASE_STUDIES,
-  CLIENTS,
   INDUSTRIES,
-  SERVICES,
-  TEAM,
-  TESTIMONIALS,
   TRUST_BADGES,
   WHY_POINTS,
 } from "@/data/site";
@@ -23,24 +20,6 @@ export function TrustBand() {
           {b.label}
         </div>
       ))}
-    </div>
-  );
-}
-
-/* ── Client marquee ── */
-export function Marquee() {
-  return (
-    <div className="mq-sec">
-      <p className="mq-lbl">Trusted by world-class enterprises globally</p>
-      <div className="mq-track">
-        <div className="mq-inner">
-          {[...CLIENTS, ...CLIENTS].map((c, i) => (
-            <span key={`${c}-${i}`} aria-hidden={i >= CLIENTS.length}>
-              {c}
-            </span>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
@@ -66,8 +45,8 @@ export function SectionHeader({
 
 /* ── Services ── */
 export function Services({
-  title = "Four services. One accountable SAP partner.",
-  sub = "Upgrade, support, govern or assess your SAP landscape with utilities-focused specialists.",
+  title = "Five ways to make SAP delivery more controlled.",
+  sub = "Upgrade, support, governance, BTP + AI and utilities health assessment presented around decisions, risk and operational continuity.",
 }: {
   title?: string;
   sub?: string;
@@ -75,54 +54,12 @@ export function Services({
   return (
     <section className="sec" id="services">
       <SectionHeader
-        tag="Our Services"
+        tag="Services"
         title={title}
         sub={sub}
       />
-      <Reveal className="svc-wrap">
-        <div className="svc-rail" aria-label="UtilityNexus.ai SAP services">
-          {SERVICES.map((s, i) => (
-            <Link
-              key={s.slug}
-              href={s.href}
-              className={`svc-card${s.isNew ? " svc-ai" : ""}`}
-            >
-              <span className="svc-img">
-                <Image
-                  src={s.image}
-                  width={1672}
-                  height={941}
-                  alt={`${s.title} delivery team`}
-                  sizes="(max-width: 900px) 82vw, 340px"
-                />
-              </span>
-              <span className="svc-card-top">
-                <span className="svc-n">{String(i + 1).padStart(2, "0")}</span>
-                {s.isNew && <span className="ai-new">Free assessment</span>}
-              </span>
-              <span className="svc-mid">
-                <h4>{s.title}</h4>
-                <p>{s.description}</p>
-              </span>
-              <span className="svc-chips">
-                {s.chips.slice(0, 4).map((c) => (
-                  <span key={c} className="chip">
-                    {c}
-                  </span>
-                ))}
-              </span>
-              <span className="svc-arr" aria-hidden="true">
-                <Icon name="arrow" size={14} strokeWidth={2.5} />
-              </span>
-            </Link>
-          ))}
-        </div>
-        <div className="rail-actions">
-          <Link href="/services" className="text-link">
-            View service page <Icon name="arrow" size={13} strokeWidth={2.5} />
-          </Link>
-          <span>Four focused ways to improve SAP delivery and operations</span>
-        </div>
+      <Reveal className="service-showcase-wrap">
+        <ServiceShowcase />
       </Reveal>
     </section>
   );
@@ -133,39 +70,34 @@ export function VisualProof() {
   return (
     <section className="visual-proof" aria-labelledby="visual-proof-title">
       <div className="vp-copy">
-        <span className="stag">Utilities Delivery Focus</span>
-        <h2 id="visual-proof-title">SAP decisions grounded in how utilities actually operate.</h2>
+        <span className="stag">Free POWERON Health Check</span>
+        <h2 id="visual-proof-title">
+          Find <span className="no-wrap">SAP IS-U</span> risk before it reaches customers.
+        </h2>
         <p>
-          UtilityNexus.ai connects SAP architecture and delivery with meter-to-cash, billing,
-          customer service and operational support. That context helps teams prioritize the risks
-          that matter and make changes with less disruption.
+          POWERON reviews meter-to-cash, billing, interfaces, custom code and support dependencies.
+          You receive a prioritized view of stability risks, quick wins and upgrade-readiness work.
         </p>
         <div className="vp-points">
-          <span>ECC to S/4HANA</span>
-          <span>Implementation governance</span>
-          <span>SAP IS-U health</span>
+          <span>Meter-to-cash integrity</span>
+          <span>Processing and custom-code risk</span>
+          <span>Upgrade readiness</span>
         </div>
+        <Link href="/services#poweron" className="vp-link">
+          Request the free health check
+          <Icon name="arrow" size={14} strokeWidth={2.5} />
+        </Link>
       </div>
       <div className="vp-images">
         <figure className="vp-img primary">
           <Image
-            src="/sap-cloud-team.png"
+            src="/sap-utilities-health-assessment.png"
             width={1672}
             height={941}
-            alt="SAP consultants reviewing cloud migration architecture in a modern office"
+            alt="Utilities operations team reviewing SAP system health and service performance"
             sizes="(max-width: 900px) 92vw, 48vw"
           />
-          <figcaption>S/4HANA upgrade planning</figcaption>
-        </figure>
-        <figure className="vp-img secondary">
-          <Image
-            src="/sap-managed-ops.png"
-            width={1672}
-            height={941}
-            alt="Enterprise support team monitoring SAP managed services and analytics"
-            sizes="(max-width: 900px) 72vw, 24vw"
-          />
-          <figcaption>SAP AMS operations</figcaption>
+          <figcaption>SAP IS-U operational health review</figcaption>
         </figure>
       </div>
     </section>
@@ -195,15 +127,15 @@ export function WhyUs() {
   return (
     <section className="sec alt" id="why-us">
       <SectionHeader
-        tag="Why Choose Us"
-        title="Utilities context. SAP delivery discipline."
-        sub="A lean specialist team spanning assessment, governance, transformation and ongoing application support."
+        tag="Delivery"
+        title="Utilities context, with SAP discipline."
+        sub="A specialist team for the work that protects continuity: assessment, governance, transformation and application support."
       />
       <div className="why-grid">
         <Reveal variant="left" className="why-pts">
           <figure className="why-photo">
             <Image
-              src="/solutions-assessment.png"
+              src="/sap-utilities-transformation-hero.png"
               width={1672}
               height={941}
               alt="SAP consultants prioritizing enterprise transformation roadmap in a workshop"
@@ -275,14 +207,16 @@ export function Industries() {
 }
 
 /* ── Case studies ── */
-export function CaseStudies() {
+export function CaseStudies({ showHeader = true }: { showHeader?: boolean }) {
   return (
     <section className="sec alt" id="cases">
-      <SectionHeader
-        tag="Case Studies"
-        title="Proven Results at Enterprise Scale"
-        sub="Real transformations delivered for the world's most demanding organisations."
-      />
+      {showHeader && (
+        <SectionHeader
+          tag="Engagement Patterns"
+          title="What the work looks like in practice"
+          sub="Representative delivery patterns showing the scope, decisions and outputs of each engagement. These are not attributed client case studies."
+        />
+      )}
       <div className="cc-grid">
         {CASE_STUDIES.map((cs) => (
           <Reveal key={cs.title} as="article" className="cc-c">
@@ -305,73 +239,6 @@ export function CaseStudies() {
                     <div className="ccm-v">{m.value}</div>
                     <div className="ccm-l">{m.label}</div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-/* ── Testimonials ── */
-export function Testimonials() {
-  return (
-    <section className="sec" id="testi">
-      <SectionHeader
-        tag="Client Testimonials"
-        title="What Enterprise Leaders Say"
-        sub="Trusted by CIOs, CTOs and business leaders across the globe."
-      />
-      <div className="tst-grid">
-        {TESTIMONIALS.map((t) => (
-          <Reveal key={t.name} as="figure" className="tst-c">
-            <div className="stars" aria-label="5 out of 5 stars">
-              ★★★★★
-            </div>
-            <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
-            <figcaption className="tst-a">
-              <span className="tst-av" aria-hidden="true">
-                {t.initials}
-              </span>
-              <span>
-                <span className="tst-n" style={{ display: "block" }}>
-                  {t.name}
-                </span>
-                <span className="tst-r">{t.role}</span>
-              </span>
-            </figcaption>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-/* ── Team ── */
-export function Team() {
-  return (
-    <section className="sec alt" id="team">
-      <SectionHeader
-        tag="Our Team"
-        title="SAP Excellence, Human-Led"
-        sub="50+ certified SAP consultants, architects and AI engineers behind every transformation."
-      />
-      <div className="tm-grid">
-        {TEAM.map((m) => (
-          <Reveal key={m.name} className="tm-c">
-            <div className={`tm-bg ${m.theme}`} aria-hidden="true">
-              {m.initials}
-            </div>
-            <div className="tm-inf">
-              <h4>{m.name}</h4>
-              <p>{m.role}</p>
-              <div className="tm-tags">
-                {m.tags.map((t) => (
-                  <span key={t} className="ttag">
-                    {t}
-                  </span>
                 ))}
               </div>
             </div>

@@ -10,12 +10,26 @@ export function ServiceDetails() {
   return (
     <section className="service-details" aria-labelledby="service-details-title">
       <div className="service-details-head">
-        <span className="stag">Core Services</span>
-        <h2 id="service-details-title">Choose the support your SAP programme needs now.</h2>
-        <p>
-          Each engagement is designed around a clear delivery problem, defined outputs and an
-          accountable path forward.
-        </p>
+        <div className="service-details-copy">
+          <span className="stag">Core Services</span>
+          <h2 id="service-details-title">Choose by SAP priority.</h2>
+          <p>
+            Select the situation closest to your current SAP delivery problem, then review the
+            scope, outputs and next step.
+          </p>
+        </div>
+        <nav className="service-jump service-details-jump" aria-label="Jump to a service">
+          {DELIVERY_SERVICES.map((service) => (
+            <Link href={`#${service.slug}`} key={service.slug}>
+              {service.slug === "sap-upgrades"
+                ? "ECC to S/4HANA"
+                : service.slug === "btp-ai-agents"
+                  ? "BTP + AI Agents"
+                  : service.title}
+            </Link>
+          ))}
+          <Link href="#poweron">POWERON Health Check</Link>
+        </nav>
       </div>
 
       <div className="service-detail-list">
@@ -86,7 +100,7 @@ export function PowerOnAssessment() {
 
       <Reveal variant="right" className="poweron-visual">
         <Image
-          src="/case-utilities.png"
+          src="/sap-utilities-health-assessment.png"
           width={1672}
           height={941}
           alt="Utilities operations team reviewing SAP IS-U meter-to-cash performance"

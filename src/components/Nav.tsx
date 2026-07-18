@@ -4,7 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Icon from "./Icon";
+import LogoMark from "./LogoMark";
 import { NAV_LINKS, SITE } from "@/data/site";
+
+function isActiveRoute(pathname: string, href: string) {
+  const normalize = (value: string) => value === "/" ? value : value.replace(/\/$/, "");
+  return href.startsWith("/") && normalize(pathname) === normalize(href);
+}
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -18,7 +24,7 @@ export default function Nav() {
       <nav className="nav" aria-label="Main navigation">
         <Link href="/" className="logo">
           <span className="lmark" aria-hidden="true">
-            <span>UN</span>
+            <LogoMark />
           </span>
           <span className="logo-copy">
             <strong>{SITE.name}</strong>
@@ -27,10 +33,14 @@ export default function Nav() {
         </Link>
         <ul className="nl">
           {NAV_LINKS.map((l) => {
-            const active = l.href.startsWith("/") && pathname === l.href;
+            const active = isActiveRoute(pathname, l.href);
             return (
               <li key={l.label}>
-                <Link href={l.href} className={active ? "act" : undefined}>
+                <Link
+                  href={l.href}
+                  className={active ? "act" : undefined}
+                  aria-current={active ? "page" : undefined}
+                >
                   {l.label}
                 </Link>
               </li>
@@ -38,11 +48,9 @@ export default function Nav() {
           })}
         </ul>
         <div className="nr">
-          <Link href="/case-studies" className="btn-o">
-            Case Studies
-          </Link>
           <Link href="/#contact" className="btn-p">
             Get Consultation
+            <Icon name="arrow" size={14} strokeWidth={2.4} />
           </Link>
           <button
             className="nav-burger"
@@ -55,16 +63,30 @@ export default function Nav() {
           </button>
         </div>
       </nav>
-      <div id="mobile-menu" className={`nav-mobile${open ? " open" : ""}`}>
-        {NAV_LINKS.map((l) => (
-          <Link key={l.label} href={l.href} onClick={() => setOpen(false)}>
-            {l.label}
-          </Link>
-        ))}
-        <Link href="/#contact" onClick={() => setOpen(false)}>
+      <nav
+        id="mobile-menu"
+        className={`nav-mobile${open ? " open" : ""}`}
+        aria-label="Mobile navigation"
+      >
+        {NAV_LINKS.map((l) => {
+          const active = isActiveRoute(pathname, l.href);
+          return (
+            <Link
+              key={l.label}
+              href={l.href}
+              className={active ? "act" : undefined}
+              aria-current={active ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {l.label}
+            </Link>
+          );
+        })}
+        <Link className="nav-mobile-cta" href="/#contact" onClick={() => setOpen(false)}>
           Get Consultation
+          <Icon name="arrow" size={14} strokeWidth={2.4} />
         </Link>
-      </div>
+      </nav>
     </>
   );
 }

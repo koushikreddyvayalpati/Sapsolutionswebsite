@@ -7,6 +7,7 @@ import {
   VisualProof,
   WhyUs,
 } from "@/components/Sections";
+import "./home.css";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
       <Nav />
       <main id="main" className="home-page">
         <Hero />
-        <VisualProof />
         <Services />
+        <VisualProof />
         <WhyUs />
         <Contact />
       </main>

@@ -33,22 +33,20 @@ export default function Contact() {
 
   return (
     <section className="sec alt" id="contact">
-      <Reveal className="shdr">
-        <span className="stag">Contact Us</span>
-        <h2>Start with the SAP issue that matters now.</h2>
-        <p>Speak directly with a utilities and SAP delivery specialist.</p>
-      </Reveal>
       <div className="con-grid">
         <Reveal variant="left" className="con-lft">
-          <h3>Talk to UtilityNexus.ai</h3>
+          <span className="stag">Enterprise Enquiry</span>
+          <h3>Speak with a utilities SAP specialist.</h3>
           <p>
-            Tell us whether you are planning an ECC upgrade, filling an AMS skills gap, governing an
-            implementation or reviewing SAP IS-U health.
+            Share the SAP decision in front of your team. We will help you clarify the service,
+            delivery route and next practical step.
           </p>
-          <div className="con-proof" aria-label="Consultation assurances">
-            <span>Specialist response</span>
-            <span>NDA-ready</span>
-            <span>Utilities-aware</span>
+          <div className="con-topics" aria-label="Common SAP enquiry areas">
+            <span>ECC to S/4HANA</span>
+            <span>AMS support</span>
+            <span>Governance</span>
+            <span>BTP + AI agents</span>
+            <span>SAP IS-U health</span>
           </div>
           {CONTACT_INFO.map((c) => (
             <div className="con-row" key={c.label}>
@@ -63,7 +61,7 @@ export default function Contact() {
           ))}
         </Reveal>
         <Reveal variant="right" as="form" className="con-form" onSubmit={handleSubmit}>
-          <h4>Request a Consultation</h4>
+          <h4>Request a consultation</h4>
           <div className="fg">
             <div className="ff">
               <label htmlFor="c-first">First Name</label>
@@ -125,11 +123,12 @@ export default function Contact() {
             </div>
           </div>
           <button type="submit" className="sbtn" disabled={submitted}>
-            {submitted ? "Opening Your Email App…" : "Prepare Email Request"}
+            {submitted ? "Opening Your Email App…" : "Create Email Draft"}
             {!submitted && <Icon name="arrow" size={13} strokeWidth={2.5} />}
           </button>
           <p className="form-note">
-            This opens a pre-filled message in your email app so you can review it before sending.
+            This static site does not transmit or store your form data. The button opens a
+            pre-filled draft in your email application for you to review and send.
           </p>
         </Reveal>
       </div>

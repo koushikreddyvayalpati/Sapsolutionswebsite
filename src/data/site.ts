@@ -1,39 +1,25 @@
 export const SITE = {
   name: "UtilityNexus.ai",
   tagline:
-    "SAP delivery and utilities expertise for upgrades, application support, project governance and operational health.",
+    "SAP delivery and utilities expertise for upgrades, application support, project governance, BTP + AI and operational health.",
 };
 
 export const NAV_LINKS = [
   { label: "Services", href: "/services" },
   { label: "Solutions", href: "/solutions" },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Delivery Examples", href: "/case-studies" },
 ];
 
-export const HERO_TRUST = ["ECC to S/4HANA", "SAP AMS", "Utilities & SAP IS-U"];
+export const HERO_TRUST = ["ECC to S/4HANA", "SAP AMS", "BTP + AI", "Utilities & SAP IS-U"];
 
 export const TRUST_BADGES = [
   { icon: "pulse", label: "ECC to S/4HANA Upgrades" },
   { icon: "team", label: "Skilled SAP AMS Resources" },
   { icon: "shield", label: "Implementation Governance" },
+  { icon: "pulse", label: "SAP BTP, Joule & Agentic AI" },
   { icon: "bolt", label: "SAP IS-U Expertise" },
   { icon: "check", label: "Free POWERON Health Check" },
 ] as const;
-
-export const CLIENTS = [
-  "Shell",
-  "ExxonMobil",
-  "Siemens",
-  "ABB Group",
-  "TotalEnergies",
-  "BP Energy",
-  "Chevron",
-  "SABIC",
-  "Petrobras",
-  "Halliburton",
-  "Schneider Electric",
-  "ENGIE",
-];
 
 export interface Service {
   slug: string;
@@ -55,7 +41,7 @@ export const SERVICES: Service[] = [
       "Plan and execute a controlled move from SAP ECC to S/4HANA with clear readiness, data, custom-code and cutover decisions.",
     chips: ["Readiness", "System Conversion", "Data Migration", "Cutover"],
     href: "/solutions#s6",
-    image: "/sap-cloud-team.png",
+    image: "/sap-s4hana-upgrade-planning.png",
     outcome: "A phased upgrade roadmap that protects business continuity and makes risk visible early.",
     deliverables: [
       "ECC landscape and S/4HANA readiness assessment",
@@ -70,7 +56,7 @@ export const SERVICES: Service[] = [
       "Keep SAP stable and responsive with experienced functional, technical and utilities specialists who fit your operating model.",
     chips: ["Production Support", "Enhancements", "Flexible Staffing", "SAP IS-U"],
     href: "/solutions#s4",
-    image: "/sap-managed-ops.png",
+    image: "/sap-ams-operations-support.png",
     outcome: "The right SAP expertise when it is needed, without carrying an oversized permanent support team.",
     deliverables: [
       "Incident, problem and service-request support",
@@ -85,12 +71,28 @@ export const SERVICES: Service[] = [
       "Independent project governance that keeps SAP implementation scope, decisions, delivery quality, schedule and budget under control.",
     chips: ["PMO", "Scope Control", "Budget", "Quality Gates"],
     href: "/solutions#s1",
-    image: "/enterprise-sap-hero.png",
+    image: "/sap-programme-governance-review.png",
     outcome: "A transparent delivery model with accountable decisions and fewer late surprises.",
     deliverables: [
       "Programme governance, stage gates and decision rights",
       "Scope, budget, schedule, risk and dependency oversight",
       "Vendor coordination, quality assurance and executive reporting",
+    ],
+  },
+  {
+    slug: "btp-ai-agents",
+    title: "SAP BTP, Joule & Agentic AI",
+    description:
+      "Design governed SAP BTP extensions, Joule-ready use cases and custom agentic AI workflows that improve utility operations without bypassing SAP controls.",
+    chips: ["SAP BTP", "Joule", "AI Agents", "Integration"],
+    href: "/solutions#btp-ai",
+    image: "/sap-btp-ai-agents-advisory.png",
+    outcome:
+      "A practical AI roadmap that connects automation ideas to SAP data, process ownership, security and measurable business value.",
+    deliverables: [
+      "BTP capability and integration architecture review",
+      "Joule and custom AI-agent use-case prioritization",
+      "Governance model for data access, approvals, auditability and human oversight",
     ],
   },
   {
@@ -100,7 +102,7 @@ export const SERVICES: Service[] = [
       "Find stability, process and upgrade risks across SAP IS-U and meter-to-cash before they become production issues.",
     chips: ["Free Health Check", "SAP IS-U", "Meter to Cash", "Risk Roadmap"],
     href: "/services#poweron",
-    image: "/case-utilities.png",
+    image: "/sap-utilities-health-assessment.png",
     outcome: "A prioritized, practical improvement roadmap built around utilities operations and SAP best practices.",
     deliverables: [
       "SAP IS-U configuration and meter-to-cash review",
@@ -174,80 +176,60 @@ export const INDUSTRIES = [
 ] as const;
 
 export const STATS = [
-  { count: 200, suffix: "+", label: "Enterprise Clients", sub: "Active worldwide" },
-  { count: 500, suffix: "+", label: "SAP Projects", sub: "Successfully delivered" },
-  { count: 98, suffix: "%", label: "Client Satisfaction", sub: "Measured annually" },
-  { count: 15, suffix: "+", label: "Years SAP Focus", sub: "Pure-SAP practice" },
+  { count: 5, suffix: "", label: "Focused Services", sub: "From AI through operations" },
+  { count: 3, suffix: "", label: "Delivery Priorities", sub: "Risk, control and continuity" },
+  { count: 1, suffix: "", label: "Utilities Focus", sub: "SAP IS-U and meter to cash" },
 ];
 
 export const CASE_STUDIES = [
   {
     theme: "h-a",
-    image: "/case-energy.png",
-    tag: "Oil & Gas · S/4HANA",
-    title: "Global Energy S/4HANA Transformation",
-    body: "Migrated a Fortune 500 oil & gas company's SAP ECC to S/4HANA across 12 countries — zero data loss, on time and on budget.",
+    image: "/sap-s4hana-upgrade-planning.png",
+    tag: "Representative pattern · S/4HANA",
+    title: "Multi-entity ECC to S/4HANA transition",
+    body: "A representative engagement pattern for organizations that need to assess readiness, govern remediation and control conversion, testing and cutover across business units.",
     metrics: [
-      { value: "40%", label: "Faster Close" },
-      { value: "$12M", label: "Annual Savings" },
-      { value: "18mo", label: "Go-Live" },
+      { value: "Assess", label: "Readiness" },
+      { value: "Control", label: "Remediation" },
+      { value: "Transition", label: "Cutover" },
     ],
   },
   {
     theme: "h-b",
-    image: "/case-utilities.png",
-    tag: "Utilities · BTP Integration",
-    title: "Smart Grid SAP BTP Platform",
-    body: "Unified BTP integration layer connecting SCADA, 3M+ IoT meters and SAP IS-U for a leading European utility — 99.9% uptime.",
+    image: "/sap-utilities-health-assessment.png",
+    tag: "Representative pattern · SAP IS-U",
+    title: "Utilities landscape health and stabilization",
+    body: "A representative POWERON assessment covering meter-to-cash integrity, billing exceptions, interfaces, custom programs, operational controls and support dependencies.",
     metrics: [
-      { value: "99.9%", label: "Uptime" },
-      { value: "60%", label: "Faster Processing" },
-      { value: "3M+", label: "Meters" },
+      { value: "Review", label: "Operations" },
+      { value: "Prioritize", label: "Risk" },
+      { value: "Plan", label: "Improvement" },
     ],
   },
   {
     theme: "h-c",
-    image: "/case-ai-manufacturing.png",
-    tag: "Manufacturing · Agentic AI",
-    title: "Agentic AI SAP Operations Centre",
-    body: "Autonomous AI agents in SAP PM and MM — self-healing workflows, predictive maintenance and zero-touch procurement at scale.",
+    image: "/sap-programme-governance-review.png",
+    tag: "Representative pattern · Governance",
+    title: "Independent SAP programme governance",
+    body: "A representative governance model for making scope, budget, schedule, architecture, vendor responsibilities and quality decisions visible throughout implementation.",
     metrics: [
-      { value: "3×", label: "ROI in 12mo" },
-      { value: "78%", label: "Automation" },
-      { value: "Real-time", label: "AI Decisions" },
+      { value: "Define", label: "Decision rights" },
+      { value: "Monitor", label: "Delivery risk" },
+      { value: "Report", label: "Accountability" },
     ],
   },
-];
-
-export const TESTIMONIALS = [
   {
-    quote:
-      "UtilityNexus.ai delivered our S/4HANA transformation on time and on budget — something we were told was impossible. Their SAP depth is genuinely unmatched.",
-    initials: "RK",
-    name: "Rajiv Kumar",
-    role: "CIO, Global Energy Corp",
+    theme: "h-b",
+    image: "/sap-btp-ai-agents-advisory.png",
+    tag: "Representative pattern · BTP + AI",
+    title: "Governed BTP and AI-agent roadmap",
+    body: "A representative advisory pattern for utilities that want SAP BTP extensions, Joule-enabled experiences or custom AI agents without creating unmanaged automation risk.",
+    metrics: [
+      { value: "Map", label: "BTP capabilities" },
+      { value: "Prioritize", label: "AI use cases" },
+      { value: "Govern", label: "Controls" },
+    ],
   },
-  {
-    quote:
-      "The BTP platform processes over 3 million meter reads daily without a single failure. 99.9% uptime — these people understand enterprise-grade reliability.",
-    initials: "SM",
-    name: "Sarah Mitchell",
-    role: "SVP Technology, Utility Innovations Ltd",
-  },
-  {
-    quote:
-      "Their Agentic AI project was transformational. Autonomous agents now handle our procurement and plant maintenance — we've freed an entire team for strategic work.",
-    initials: "MH",
-    name: "Marcus Hendricks",
-    role: "COO, Precision Manufacturing Group",
-  },
-];
-
-export const TEAM = [
-  { theme: "t1", initials: "AK", name: "Ahmed Al-Kasem", role: "Chief SAP Architect", tags: ["S/4HANA", "BTP", "Oil & Gas"] },
-  { theme: "t2", initials: "PV", name: "Priya Venkatesh", role: "Head of AI & Innovation", tags: ["Agentic AI", "ML", "SAP AI"] },
-  { theme: "t3", initials: "JS", name: "James Sterling", role: "SAP Delivery Director", tags: ["ERP", "Migration", "Cloud"] },
-  { theme: "t4", initials: "LM", name: "Laura Marchetti", role: "Analytics & BI Lead", tags: ["Analytics", "BW/4HANA", "SAC"] },
 ];
 
 export const FAQS = [
@@ -265,18 +247,22 @@ export const FAQS = [
   },
   {
     q: "What is SAP with Agentic AI?",
-    a: "Autonomous AI agents operating inside SAP workflows — executing multi-step tasks, making decisions within guardrails and adapting without human intervention. Built on SAP AI Core and Joule for zero-touch operations.",
+    a: "For utilities, agentic AI should be governed automation around SAP processes. We help identify Joule-ready use cases and custom AI-agent workflows where SAP data access, approvals, auditability and human oversight are clear.",
+  },
+  {
+    q: "Where does SAP BTP fit?",
+    a: "SAP BTP is the extension, integration and data foundation for many modern SAP improvements. We use it where utilities need cleaner integrations, side-by-side extensions, analytics or AI-enabled workflows without adding brittle custom code inside the core SAP system.",
   },
   {
     q: "Which industries do you specialise in?",
-    a: "Oil & Gas, Utilities & Energy and manufacturing are our deepest verticals — with certified IS-U and IS-Oil specialists. Our core capabilities also serve finance, healthcare, retail and public sector globally.",
+    a: "Utilities and energy are our primary focus, with particular attention to SAP IS-U, meter-to-cash, S/4HANA transition, application support and programme governance.",
   },
 ];
 
 export const CONTACT_INFO = [
   { icon: "mail", label: "Email", value: "hello@utilitynexus.ai" },
   { icon: "globe", label: "Website", value: "utilitynexus.ai" },
-  { icon: "bolt", label: "Utilities Focus", value: "SAP IS-U · Meter to Cash · S/4HANA" },
+  { icon: "bolt", label: "Utilities Focus", value: "SAP IS-U · Meter to Cash · S/4HANA · BTP + AI" },
 ] as const;
 
 export const FOOTER_COLS = [
@@ -287,26 +273,17 @@ export const FOOTER_COLS = [
       { label: "ECC to S/4HANA", href: "/solutions#s6" },
       { label: "SAP AMS", href: "/solutions#s4" },
       { label: "Implementation Governance", href: "/solutions#s1" },
+      { label: "BTP + AI Agents", href: "/solutions#btp-ai" },
       { label: "Free POWERON Health Check", href: "/services#poweron" },
-    ],
-  },
-  {
-    title: "Industries",
-    links: [
-      { label: "Oil & Gas", href: "/services" },
-      { label: "Utilities & Energy", href: "/services" },
-      { label: "Manufacturing", href: "/services" },
-      { label: "Finance", href: "/services" },
-      { label: "Public Sector", href: "/services" },
     ],
   },
   {
     title: "Company",
     links: [
       { label: "Why Us", href: "/#why-us" },
-      { label: "Case Studies", href: "/case-studies" },
+      { label: "Delivery Examples", href: "/case-studies" },
       { label: "Solutions", href: "/solutions" },
-      { label: "Blog", href: "#" },
+      { label: "Contact", href: "/#contact" },
     ],
   },
 ];

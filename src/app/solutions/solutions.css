@@ -2125,3 +2125,947 @@
   border-color: rgba(185, 198, 216, 0.86) !important;
   color: var(--navy) !important;
 }
+
+/* Buyer-oriented solutions page. Legacy solution styles above remain isolated. */
+.buyer-solutions-page {
+  background: #fff;
+  color: #101828;
+}
+
+.buyer-solutions-hero,
+.buyer-guide,
+.buyer-service-list,
+.buyer-contact-band {
+  padding-inline: max(5vw, calc((100vw - 1240px) / 2));
+}
+
+.buyer-solutions-hero {
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 132px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid #e1e7ef;
+}
+
+.buyer-solutions-hero > span,
+.buyer-section-heading > span,
+.buyer-service-copy > span,
+.buyer-contact-band > div > span {
+  padding-left: 11px;
+  border-left: 2px solid #2563eb;
+  color: #1d4ed8;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.buyer-solutions-hero h1 {
+  max-width: 980px;
+  margin: 24px 0 22px;
+  font-size: clamp(52px, 5.8vw, 84px);
+  font-weight: 680;
+  line-height: 0.99;
+  letter-spacing: 0;
+}
+
+.buyer-solutions-hero p {
+  max-width: 650px;
+  color: #5b6879;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.buyer-hero-link,
+.buyer-service-copy > a,
+.buyer-contact-band > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.buyer-hero-link {
+  margin-top: 28px;
+}
+
+.buyer-guide {
+  padding-top: 88px;
+  padding-bottom: 96px;
+}
+
+.buyer-section-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.buyer-section-heading h2,
+.buyer-contact-band h2 {
+  margin-top: 16px;
+  font-size: clamp(34px, 3.6vw, 52px);
+  font-weight: 680;
+  line-height: 1.08;
+}
+
+.buyer-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: 1px solid #dce3ec;
+}
+
+.buyer-guide-grid > a {
+  min-width: 0;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px;
+  border-right: 1px solid #dce3ec;
+  color: #101828;
+  transition: background 0.16s ease;
+}
+
+.buyer-guide-grid > a:first-child {
+  border-left: 1px solid #dce3ec;
+}
+
+.buyer-guide-grid > a:hover {
+  background: #f6f9fd;
+}
+
+.buyer-guide-grid > a > span {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.buyer-guide-grid h3 {
+  margin: 32px 0 15px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.buyer-guide-grid strong {
+  color: #1e3a8a;
+  font-size: 12px;
+}
+
+.buyer-guide-grid p {
+  margin-top: 10px;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.buyer-guide-grid svg {
+  margin-top: auto;
+  color: #2563eb;
+}
+
+.buyer-service-list {
+  border-top: 1px solid #e1e7ef;
+}
+
+.buyer-service {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 76px;
+  align-items: center;
+  min-height: 610px;
+  padding-block: 88px;
+  border-bottom: 1px solid #e1e7ef;
+  scroll-margin-top: 90px;
+}
+
+.buyer-service:nth-child(even) figure {
+  order: 2;
+}
+
+.buyer-service figure {
+  position: relative;
+  overflow: hidden;
+  min-height: 410px;
+  background: #eef2f7;
+}
+
+.buyer-service figure img {
+  width: 100%;
+  height: 100%;
+  min-height: 410px;
+  object-fit: cover;
+}
+
+.buyer-service figcaption {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #172554;
+  font-size: 11px;
+  font-weight: 750;
+  backdrop-filter: blur(12px);
+}
+
+.buyer-service-copy h2 {
+  margin: 16px 0 16px;
+  font-size: clamp(32px, 3.3vw, 48px);
+  font-weight: 680;
+  line-height: 1.05;
+}
+
+.buyer-service-copy > p {
+  color: #5b6879;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.buyer-outcome {
+  display: grid;
+  gap: 7px;
+  margin: 24px 0 20px;
+  padding: 18px 0;
+  border-block: 1px solid #dce3ec;
+}
+
+.buyer-outcome small {
+  color: #1d4ed8;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.buyer-outcome strong {
+  color: #26364b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.buyer-service-copy ul {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 26px;
+  list-style: none;
+}
+
+.buyer-service-copy li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 8px;
+  color: #536174;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.buyer-service-copy li svg {
+  margin-top: 2px;
+  color: #2563eb;
+}
+
+.buyer-contact-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 60px;
+  align-items: end;
+  padding-top: 86px;
+  padding-bottom: 86px;
+  background: #f5f8fc;
+}
+
+.buyer-contact-band > div {
+  max-width: 760px;
+}
+
+.buyer-contact-band p {
+  margin-top: 13px;
+  color: #667085;
+}
+
+.buyer-contact-band > a {
+  min-height: 44px;
+  padding: 11px 16px;
+  border: 1px solid #1d4ed8;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #fff;
+}
+
+.buyer-contact-band > a:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 960px) {
+  .buyer-solutions-hero,
+  .buyer-guide,
+  .buyer-service-list,
+  .buyer-contact-band {
+    padding-inline: 5%;
+  }
+
+  .buyer-guide-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .buyer-guide-grid > a,
+  .buyer-guide-grid > a:first-child {
+    min-height: 250px;
+    border: 1px solid #dce3ec;
+  }
+
+  .buyer-service {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    min-height: auto;
+    padding-block: 70px;
+  }
+
+  .buyer-service:nth-child(even) figure {
+    order: 0;
+  }
+
+  .buyer-contact-band {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .buyer-solutions-hero {
+    min-height: auto;
+    padding-top: 126px;
+    padding-bottom: 62px;
+  }
+
+  .buyer-solutions-hero h1 {
+    font-size: 46px;
+  }
+
+  .buyer-guide {
+    padding-block: 68px;
+  }
+
+  .buyer-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-guide-grid > a {
+    min-height: 225px;
+  }
+
+  .buyer-service figure,
+  .buyer-service figure img {
+    min-height: 260px;
+  }
+
+  .buyer-service-copy h2 {
+    font-size: 34px;
+  }
+
+  .buyer-contact-band {
+    padding-block: 68px;
+  }
+}
+
+/* ── Premium buyer journey overrides ── */
+.buyer-solutions-page {
+  --sol-ink: #0b1220;
+  --sol-muted: #566274;
+  --sol-line: #dce3ec;
+  --sol-soft: #f6f7f9;
+  --sol-blue: #1748b7;
+  background: #fff;
+  color: var(--sol-ink);
+}
+
+.buyer-solutions-hero {
+  min-height: 610px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(430px, 0.66fr);
+  gap: clamp(44px, 6vw, 84px);
+  align-items: center;
+  justify-content: stretch;
+  padding-top: 128px;
+  padding-bottom: 56px;
+  border-bottom-color: var(--sol-line);
+  background:
+    linear-gradient(180deg, #fff 0%, #fff 70%, #f6f7f9 100%),
+    #fff;
+}
+
+.buyer-hero-copy {
+  min-width: 0;
+}
+
+.buyer-hero-copy > span,
+.buyer-section-heading > span,
+.buyer-service-copy > span,
+.buyer-contact-band > div > span {
+  padding-left: 0;
+  border-left: 0;
+  color: var(--sol-blue);
+}
+
+.buyer-solutions-hero h1 {
+  max-width: 780px;
+  font-size: clamp(46px, 5vw, 76px);
+  color: var(--sol-ink);
+}
+
+.buyer-solutions-hero p,
+.buyer-guide-grid p,
+.buyer-service-copy > p,
+.buyer-contact-band p {
+  color: var(--sol-muted);
+}
+
+.buyer-hero-link {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--sol-ink);
+  border-radius: 8px;
+  background: var(--sol-ink);
+  color: #fff;
+}
+
+.buyer-hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 400px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid #d7dfe9;
+  border-radius: 8px;
+  background: #eef2f6;
+  box-shadow: 0 26px 70px rgba(11, 18, 32, 0.11);
+}
+
+.buyer-hero-visual img {
+  object-fit: cover;
+}
+
+.buyer-hero-visual figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #6b7686;
+  font-size: 11px;
+  font-weight: 650;
+  backdrop-filter: blur(12px);
+}
+
+.buyer-hero-visual figcaption span:first-child {
+  color: var(--sol-ink);
+  font-weight: 800;
+}
+
+.buyer-guide {
+  padding-top: 66px;
+  padding-bottom: 82px;
+  border-bottom: 1px solid var(--sol-line);
+}
+
+.buyer-guide-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(300px, 370px);
+  grid-template-columns: none;
+  gap: 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  border: 1px solid var(--sol-line);
+  border-radius: 8px;
+  background: #fff;
+  scrollbar-width: thin;
+}
+
+.buyer-guide-grid > a,
+.buyer-guide-grid > a:first-child {
+  min-height: 320px;
+  scroll-snap-align: start;
+  border: 0;
+  border-right: 1px solid var(--sol-line);
+  background: #fff;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.buyer-guide-grid > a:last-child {
+  border-right: 0;
+}
+
+.buyer-guide-grid > a:hover {
+  background: var(--sol-soft);
+  transform: translateY(-2px);
+}
+
+.buyer-guide-grid > a > span,
+.buyer-guide-grid strong,
+.buyer-guide-grid svg,
+.buyer-outcome small,
+.buyer-service-copy li svg {
+  color: var(--sol-blue);
+}
+
+.buyer-service-list {
+  border-top: 0;
+}
+
+.buyer-service {
+  min-height: 720px;
+  gap: clamp(48px, 7vw, 96px);
+  border-bottom-color: var(--sol-line);
+}
+
+.buyer-service figure {
+  border: 1px solid #d7dfe9;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: box-shadow 0.26s ease, transform 0.26s ease;
+}
+
+.buyer-service:hover figure {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px rgba(11, 18, 32, 0.12);
+}
+
+.buyer-service figure img {
+  transition: transform 0.5s ease;
+}
+
+.buyer-service:hover figure img {
+  transform: scale(1.035);
+}
+
+.buyer-service figcaption {
+  border-radius: 7px;
+  color: var(--sol-ink);
+}
+
+.buyer-service-copy h2,
+.buyer-contact-band h2,
+.buyer-section-heading h2 {
+  color: var(--sol-ink);
+}
+
+.buyer-outcome {
+  border-block-color: var(--sol-line);
+}
+
+.buyer-service-copy > a {
+  color: var(--sol-ink);
+}
+
+.buyer-contact-band {
+  background: var(--sol-soft);
+}
+
+.buyer-contact-band > a {
+  border-color: var(--sol-ink);
+  background: var(--sol-ink);
+  border-radius: 8px;
+}
+
+.buyer-contact-band > a:hover {
+  background: #253147;
+}
+
+@media (max-width: 960px) {
+  .buyer-solutions-hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-top: 126px;
+    padding-bottom: 56px;
+  }
+
+  .buyer-hero-visual {
+    justify-self: stretch;
+    min-height: 320px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .buyer-guide-grid {
+    grid-auto-columns: minmax(292px, 78vw);
+  }
+
+  .buyer-service {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .buyer-solutions-hero h1 {
+    font-size: 42px;
+  }
+
+  .buyer-hero-visual {
+    min-height: 240px;
+  }
+
+  .buyer-hero-visual figcaption {
+    display: grid;
+    gap: 4px;
+  }
+
+  .buyer-guide {
+    padding-top: 58px;
+  }
+
+  .buyer-guide-grid {
+    grid-auto-columns: minmax(282px, 86vw);
+  }
+
+  .buyer-service figure,
+  .buyer-service figure img {
+    min-height: 282px;
+  }
+}
+
+/* Premium decision guide: compact signal + full delivery visual. */
+.buyer-guide {
+  padding-top: 72px;
+  padding-bottom: 78px;
+}
+
+.buyer-guide .buyer-section-heading {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(340px, 0.54fr);
+  column-gap: clamp(44px, 6vw, 84px);
+  row-gap: 18px;
+  align-items: end;
+  margin-bottom: 38px;
+}
+
+.buyer-guide .buyer-section-heading > span {
+  grid-column: 1 / -1;
+}
+
+.buyer-guide .buyer-section-heading h2 {
+  max-width: 760px;
+  margin-top: 0;
+}
+
+.buyer-guide .buyer-section-heading::after {
+  content: "Use this as an entry point, then review the service scope below.";
+  display: block;
+  max-width: 420px;
+  padding-top: 16px;
+  border-top: 1px solid var(--sol-line);
+  color: var(--sol-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.buyer-guide-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.74fr) minmax(0, 1fr);
+  gap: clamp(34px, 5vw, 72px);
+  align-items: stretch;
+}
+
+.buyer-guide-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: initial;
+  grid-template-columns: 1fr;
+  gap: 0;
+  overflow: visible;
+  overscroll-behavior-inline: auto;
+  scroll-snap-type: none;
+  border: 0;
+  border-top: 1px solid var(--sol-line);
+  border-radius: 0;
+  background: transparent;
+  scrollbar-width: auto;
+}
+
+.buyer-guide-grid > a,
+.buyer-guide-grid > a:first-child,
+.buyer-guide-grid > a:last-child {
+  min-height: auto;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 22px;
+  gap: 18px;
+  align-items: center;
+  scroll-snap-align: none;
+  padding: 22px 0;
+  border: 0;
+  border-bottom: 1px solid var(--sol-line);
+  background: transparent;
+  color: var(--sol-ink);
+  transform: none;
+  transition: color 0.16s ease, border-color 0.16s ease;
+}
+
+.buyer-guide-grid > a:hover {
+  background: transparent;
+  color: var(--sol-blue);
+  transform: none;
+}
+
+.buyer-guide-grid > a > span {
+  color: var(--sol-blue);
+  font-size: 12px;
+  font-weight: 780;
+}
+
+.buyer-guide-grid h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.buyer-guide-grid strong {
+  display: inline-flex;
+  margin-bottom: 6px;
+  color: #1d4ed8;
+  font-size: 12px;
+}
+
+.buyer-guide-grid p {
+  max-width: 460px;
+  margin: 0;
+  color: var(--sol-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.buyer-guide-grid svg {
+  justify-self: end;
+  margin-top: 0;
+  color: var(--sol-blue);
+}
+
+.buyer-guide-visual {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--sol-line);
+  border-radius: 8px;
+  background: #eef2f6;
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.1);
+}
+
+.buyer-guide-visual img {
+  object-fit: cover;
+}
+
+.buyer-guide-visual figcaption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #596678;
+  font-size: 12px;
+  line-height: 1.35;
+  backdrop-filter: blur(14px);
+}
+
+.buyer-guide-visual figcaption span:first-child {
+  flex-shrink: 0;
+  color: var(--sol-ink);
+  font-weight: 800;
+}
+
+@media (max-width: 980px) {
+  .buyer-guide .buyer-section-heading,
+  .buyer-guide-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-guide .buyer-section-heading::after {
+    max-width: 100%;
+  }
+
+  .buyer-guide-visual {
+    min-height: 360px;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 640px) {
+  .buyer-guide {
+    padding-top: 52px;
+    padding-bottom: 58px;
+  }
+
+  .buyer-guide .buyer-section-heading {
+    margin-bottom: 28px;
+  }
+
+  .buyer-guide-grid > a,
+  .buyer-guide-grid > a:first-child,
+  .buyer-guide-grid > a:last-child {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .buyer-guide-grid svg {
+    display: none;
+  }
+
+  .buyer-guide-visual {
+    min-height: 280px;
+  }
+
+  .buyer-guide-visual figcaption {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* Page-level editorial image hero for Solutions. */
+.buyer-solutions-page .buyer-solutions-hero {
+  position: relative;
+  min-height: min(780px, calc(100vh - 72px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+  padding-top: 132px;
+  padding-bottom: 54px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--sol-line);
+  background: #07111f;
+}
+
+.buyer-solutions-page .buyer-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.buyer-solutions-page .buyer-hero-copy > span {
+  color: #9fc0ff;
+}
+
+.buyer-solutions-page .buyer-solutions-hero h1 {
+  max-width: 800px;
+  color: #fff;
+  font-size: clamp(48px, 5.4vw, 86px);
+  text-shadow: 0 18px 46px rgba(0, 0, 0, 0.38);
+}
+
+.buyer-solutions-page .buyer-solutions-hero p {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.76);
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+}
+
+.buyer-solutions-page .buyer-hero-link {
+  min-height: 44px;
+  justify-content: center;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  background: #fff;
+  color: #07111f;
+}
+
+.buyer-solutions-page .buyer-hero-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: auto;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #07111f;
+  box-shadow: none;
+}
+
+.buyer-solutions-page .buyer-hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 17, 31, 0.92) 0%, rgba(7, 17, 31, 0.68) 36%, rgba(7, 17, 31, 0.12) 74%),
+    linear-gradient(180deg, rgba(7, 17, 31, 0.22) 0%, rgba(7, 17, 31, 0.24) 100%);
+  pointer-events: none;
+}
+
+.buyer-solutions-page .buyer-hero-visual figcaption {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .buyer-solutions-page .buyer-solutions-hero {
+    min-height: 680px;
+    padding-inline: 5%;
+  }
+
+  .buyer-solutions-page .buyer-hero-copy {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 600px) {
+  .buyer-solutions-page .buyer-solutions-hero {
+    min-height: 720px;
+    padding-top: 126px;
+    padding-bottom: 34px;
+  }
+
+  .buyer-solutions-page .buyer-solutions-hero h1 {
+    font-size: 42px;
+  }
+
+  .buyer-solutions-page .buyer-hero-copy {
+    padding: 24px;
+    background: transparent;
+  }
+}
+
+/* Small-screen width guardrails for the decision guide visual. */
+@media (max-width: 640px) {
+  .buyer-guide-layout,
+  .buyer-guide-visual {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .buyer-guide-visual {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+
+  .buyer-guide-visual figcaption {
+    max-width: calc(100% - 24px);
+  }
+}
