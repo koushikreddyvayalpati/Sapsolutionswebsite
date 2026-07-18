@@ -479,6 +479,10 @@
   text-align: right;
 }
 
+.home-page .service-swipe-controls {
+  display: none;
+}
+
 .home-page .service-stage-cta {
   display: inline-flex;
   flex-shrink: 0;
@@ -1403,6 +1407,7 @@
 
   .home-page .service-stage {
     overflow: hidden;
+    touch-action: pan-y;
   }
 
   .home-page .service-stage-media {
@@ -1415,5 +1420,33 @@
   .home-page #contact .con-form {
     min-width: 0;
     max-width: 100%;
+  }
+
+  .home-page .service-swipe-controls {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .home-page .service-swipe-controls button {
+    min-height: 38px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 760;
+  }
+
+  .home-page .service-swipe-controls span {
+    min-width: 0;
+    color: #697589;
+    font-size: 12px;
+    font-weight: 680;
+    text-align: center;
   }
 }

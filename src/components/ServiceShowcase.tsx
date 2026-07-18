@@ -2,19 +2,29 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState, type KeyboardEvent } from "react";
+import { useRef, useState, type KeyboardEvent, type TouchEvent } from "react";
 import { SERVICES } from "@/data/site";
 import Icon from "./Icon";
 
 export default function ServiceShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const touchLatest = useRef<{ x: number; y: number } | null>(null);
   const service = SERVICES[activeIndex];
+
+  function setServiceIndex(index: number) {
+    setActiveIndex((index + SERVICES.length) % SERVICES.length);
+  }
 
   function moveFocus(index: number) {
     const nextIndex = (index + SERVICES.length) % SERVICES.length;
     setActiveIndex(nextIndex);
     tabRefs.current[nextIndex]?.focus();
+  }
+
+  function moveService(index: number) {
+    setServiceIndex(index);
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
@@ -31,6 +41,31 @@ export default function ServiceShowcase() {
       event.preventDefault();
       moveFocus(SERVICES.length - 1);
     }
+  }
+
+  function handleTouchStart(event: TouchEvent<HTMLElement>) {
+    const touch = event.touches[0];
+    touchStart.current = { x: touch.clientX, y: touch.clientY };
+    touchLatest.current = { x: touch.clientX, y: touch.clientY };
+  }
+
+  function handleTouchMove(event: TouchEvent<HTMLElement>) {
+    const touch = event.touches[0];
+    touchLatest.current = { x: touch.clientX, y: touch.clientY };
+  }
+
+  function handleTouchEnd() {
+    if (!touchStart.current || !touchLatest.current) return;
+
+    const deltaX = touchLatest.current.x - touchStart.current.x;
+    const deltaY = touchLatest.current.y - touchStart.current.y;
+    const isHorizontalSwipe = Math.abs(deltaX) > 54 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25;
+
+    touchStart.current = null;
+    touchLatest.current = null;
+
+    if (!isHorizontalSwipe) return;
+    moveService(activeIndex + (deltaX < 0 ? 1 : -1));
   }
 
   return (
@@ -75,6 +110,9 @@ export default function ServiceShowcase() {
         className="service-stage"
         role="tabpanel"
         aria-labelledby={`service-tab-${service.slug}`}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div className="service-stage-media">
           <Image
@@ -117,6 +155,19 @@ export default function ServiceShowcase() {
           </div>
         </div>
       </article>
+
+      <div className="service-swipe-controls" aria-label="Browse services">
+        <button type="button" onClick={() => moveService(activeIndex - 1)}>
+          Previous
+        </button>
+        <span>
+          Swipe to browse · {String(activeIndex + 1).padStart(2, "0")} /{" "}
+          {String(SERVICES.length).padStart(2, "0")}
+        </span>
+        <button type="button" onClick={() => moveService(activeIndex + 1)}>
+          Next
+        </button>
+      </div>
     </div>
   );
 }
