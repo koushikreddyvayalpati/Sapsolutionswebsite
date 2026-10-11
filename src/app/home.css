@@ -34,7 +34,7 @@
   width: 100%;
   max-width: none;
   min-height: 660px;
-  padding: 104px clamp(56px, 6vw, 112px) 86px;
+  padding: 48px clamp(56px, 6vw, 112px) 86px;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(560px, 0.94fr);
   gap: clamp(48px, 6vw, 92px);
@@ -980,7 +980,7 @@
 
   .home-page .hero-inner {
     min-height: auto;
-    padding-top: 84px;
+    padding-top: 56px;
     padding-bottom: 72px;
     grid-template-columns: 1fr;
   }
@@ -1049,7 +1049,7 @@
 
 @media (max-width: 680px) {
   .home-page .hero-inner {
-    padding-top: 64px;
+    padding-top: 40px;
     padding-bottom: 58px;
   }
 
