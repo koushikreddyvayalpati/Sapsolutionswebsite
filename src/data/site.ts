@@ -269,9 +269,18 @@ export const CONTACT_INFO = [
 
 export const FOOTER_COLS = [
   {
-    title: "Services",
+    title: "Explore",
     links: [
-      { label: "All Services", href: "/services" },
+      { label: "Home", href: "/" },
+      { label: "Services", href: "/services" },
+      { label: "Solutions", href: "/solutions" },
+      { label: "Data & AI", href: "/data-ai" },
+      { label: "Delivery Examples", href: "/case-studies" },
+    ],
+  },
+  {
+    title: "SAP Services",
+    links: [
       { label: "ECC to S/4HANA", href: "/solutions#s6" },
       { label: "SAP AMS", href: "/solutions#s4" },
       { label: "Implementation Governance", href: "/solutions#s1" },
@@ -282,12 +291,9 @@ export const FOOTER_COLS = [
   {
     title: "Company",
     links: [
-      { label: "Why Us", href: "/#why-us" },
       { label: "About", href: "/about" },
-      { label: "Data & AI", href: "/data-ai" },
-      { label: "Delivery Examples", href: "/case-studies" },
-      { label: "Solutions", href: "/solutions" },
-      { label: "Contact", href: "/#contact" },
+      { label: "Why Us", href: "/#why-us" },
+      { label: "Contact us", href: "/#contact" },
     ],
   },
 ];

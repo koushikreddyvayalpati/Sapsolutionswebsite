@@ -12,7 +12,32 @@ export const metadata: Metadata = {
   description: "Utility data strategy, analytics, generative AI, predictive analytics and AI governance grounded in practical operational value.",
 };
 
-const capabilities = ["Data Strategy", "Data Platforms", "Analytics", "Generative AI", "AI Agents", "Predictive Analytics", "Intelligent Automation", "AI Governance"];
+const capabilityGroups = [
+  {
+    number: "01",
+    title: "Set the direction",
+    description: "Define priorities and safeguards before investing in new tools.",
+    capabilities: ["Data Strategy", "AI Governance"],
+  },
+  {
+    number: "02",
+    title: "Build trusted data",
+    description: "Connect utility information and make it useful for everyday decisions.",
+    capabilities: ["Data Platforms", "Analytics"],
+  },
+  {
+    number: "03",
+    title: "Act earlier",
+    description: "Spot emerging issues and streamline repeatable work.",
+    capabilities: ["Predictive Analytics", "Intelligent Automation"],
+  },
+  {
+    number: "04",
+    title: "Apply practical AI",
+    description: "Put AI to work in governed, clearly defined utility workflows.",
+    capabilities: ["Generative AI", "AI Agents"],
+  },
+] as const;
 
 const applications = [
   {
@@ -45,8 +70,17 @@ export default function DataAiPage() {
       <main id="main" className="editorial-page">
         <EditorialHero eyebrow="Data & AI" title="Turn utility data into intelligence." description="We connect customer, meter, asset and operational data to trusted analytics and practical AI. The result is clearer decisions, better service and more productive teams." image="/data-ai-hero.png" alt="Utility data specialists studying operational analytics in a control center" caption="Trusted data · practical AI · measurable value" action={{ label: "Explore applications", href: "#applications" }} />
         <section className="editorial-section editorial-capabilities" aria-labelledby="data-capabilities-title">
-          <div className="editorial-section-head"><span className="stag">What we do</span><h2 id="data-capabilities-title">A foundation for the intelligent utility.</h2><p>We connect data strategy, platforms and governance to use cases with a clear business purpose.</p></div>
-          <ul className="editorial-tags editorial-tags-large">{capabilities.map((item) => <li key={item}>{item}</li>)}</ul>
+          <div className="editorial-section-head"><div><span className="stag">What we do</span><h2 id="data-capabilities-title">From data foundations to useful AI.</h2></div><p>We connect strategy, trusted data and practical applications so each investment supports a clear utility outcome.</p></div>
+          <div className="capability-grid">
+            {capabilityGroups.map((group) => (
+              <article className="capability-card" key={group.number}>
+                <span className="capability-number" aria-hidden="true">{group.number}</span>
+                <h3>{group.title}</h3>
+                <p>{group.description}</p>
+                <ul>{group.capabilities.map((capability) => <li key={capability}>{capability}</li>)}</ul>
+              </article>
+            ))}
+          </div>
         </section>
         <section className="editorial-section editorial-applications" id="applications" aria-labelledby="applications-title">
           <div className="editorial-section-head"><span className="stag">Practical applications</span><h2 id="applications-title">Where data and AI can help.</h2></div>

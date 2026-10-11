@@ -4,23 +4,23 @@ import LogoMark from "./LogoMark";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="site-footer">
       <div className="ft-top">
         <div className="ft-brand">
-          <div className="ft-logo">
+          <Link className="ft-logo" href="/" aria-label="UtilityNexus.ai home">
             <span className="ftlm">
               <LogoMark />
             </span>
             {SITE.name}
-          </div>
+          </Link>
           <p>{SITE.tagline}</p>
           <a className="ft-email" href="mailto:hello@utilitynexus.ai">
             hello@utilitynexus.ai
           </a>
         </div>
         {FOOTER_COLS.map((col) => (
-          <div className="ft-col" key={col.title}>
-            <h5>{col.title}</h5>
+          <nav className="ft-col" aria-label={`${col.title} links`} key={col.title}>
+            <h2>{col.title}</h2>
             <ul>
               {col.links.map((l) => (
                 <li key={l.label}>
@@ -28,19 +28,14 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
         ))}
       </div>
       <div className="ft-bot">
         <span>
           © {new Date().getFullYear()} {SITE.name}. Independent SAP services consultancy.
         </span>
-        <div className="ft-bgs">
-          <span className="ftbg">SAP IS-U</span>
-          <span className="ftbg">ECC to S/4HANA</span>
-          <span className="ftbg">BTP + AI</span>
-          <span className="ftbg">POWERON</span>
-        </div>
+        <a className="ft-back-top" href="#">Back to top ↑</a>
       </div>
     </footer>
   );
