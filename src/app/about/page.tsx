@@ -25,9 +25,9 @@ export default function AboutPage() {
     <>
       <Nav />
       <main id="main" className="editorial-page">
-        <EditorialHero eyebrow="About UtilityNexus" title="Powering the intelligent utility." description="Utility expertise. Technology excellence. Intelligent transformation. We are a technology consulting company focused on helping utilities modernize, transform and operate smarter." image="/about-hero.png" alt="Utility technology consultants collaborating with energy infrastructure in view" caption="Utility expertise · technology excellence" action={{ label: "What makes us different", href: "#difference" }} />
+        <EditorialHero eyebrow="About UtilityNexus" title="Powering the intelligent utility." description="UtilityNexus combines utility industry knowledge with SAP, cloud, data and AI delivery. We help electric, gas and water utilities modernize operations and solve business challenges." image="/about-hero.png" alt="Utility technology consultants collaborating with energy infrastructure in view" caption="Utility expertise · technology excellence" action={{ label: "What makes us different", href: "#difference" }} />
         <section className="editorial-section about-intro" aria-labelledby="about-intro-title"><div><span className="stag">Who we are</span><h2 id="about-intro-title">Industry understanding meets technology delivery.</h2></div><div><p>We bring together deep utility industry knowledge with expertise across SAP, enterprise applications, cloud, data, integration and artificial intelligence. Our focus is on solving real business and operational challenges.</p><p>From customer and billing transformation to asset management, field operations, enterprise modernization and AI-enabled solutions, we help utilities connect people, processes, data and technology to create lasting business value.</p></div></section>
-        <section className="about-mission" aria-labelledby="about-mission-title"><span className="stag">Our mission</span><h2 id="about-mission-title">Help utilities become more connected, intelligent and resilient through practical, business-focused technology solutions.</h2></section>
+        <section className="about-mission" aria-labelledby="about-mission-title"><span className="stag">Our mission</span><h2 id="about-mission-title">Practical technology for resilient utilities.</h2><p>We help utilities become more connected, intelligent and resilient through business-focused technology solutions.</p></section>
         <section className="editorial-section about-difference-section" id="difference" aria-labelledby="difference-title">
           <div className="editorial-section-head">
             <span className="stag">What makes us different</span>
@@ -50,7 +50,7 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
-        <section className="editorial-band" aria-labelledby="vision-title"><div><span className="stag">Our vision</span><h2 id="vision-title">A trusted technology partner for a more digital, connected and intelligent utility future.</h2></div><Link href="/#contact">Start a conversation <Icon name="arrow" size={15} strokeWidth={2.5} /></Link></section>
+        <section className="editorial-band" aria-labelledby="vision-title"><div><span className="stag">Our vision</span><h2 id="vision-title">A more connected utility future.</h2><p>We aim to be a trusted technology partner for utilities navigating a more digital and intelligent future.</p></div><Link href="/#contact">Start a conversation <Icon name="arrow" size={15} strokeWidth={2.5} /></Link></section>
       </main>
       <Footer />
     </>

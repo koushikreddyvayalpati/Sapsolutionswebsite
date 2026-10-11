@@ -19,8 +19,8 @@ export default function ServicesPage() {
       <main id="main" className="editorial-page services-page">
         <EditorialHero
           eyebrow="Services"
-          title="Transforming utilities through technology, intelligence and industry expertise."
-          description="UtilityNexus helps utilities navigate complex technology transformations, from strategy and implementation to integration, optimization and ongoing support. Our services bring together utility industry expertise with SAP, cloud, data, AI and enterprise technologies."
+          title="Transforming utilities with technology and expertise."
+          description="From strategy and implementation to integration and support, we help utilities modernize SAP, cloud, data, AI and enterprise systems with industry knowledge and practical delivery."
           image="/services-transformation-hero.png"
           alt="Utility consultants and operations leaders reviewing a transformation roadmap"
           caption="Strategy · implementation · integration · operations"

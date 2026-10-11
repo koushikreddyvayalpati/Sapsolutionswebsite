@@ -43,7 +43,7 @@ export default function DataAiPage() {
     <>
       <Nav />
       <main id="main" className="editorial-page">
-        <EditorialHero eyebrow="Data & AI" title="Turn utility data into intelligence." description="Utility organizations generate enormous amounts of customer, asset, meter and operational data. We help turn that information into actionable intelligence through modern data foundations and practical AI that improves customer experience, employee productivity, decisions and operations." image="/data-ai-hero.png" alt="Utility data specialists studying operational analytics in a control center" caption="Trusted data · practical AI · measurable value" action={{ label: "Explore applications", href: "#applications" }} />
+        <EditorialHero eyebrow="Data & AI" title="Turn utility data into intelligence." description="We connect customer, meter, asset and operational data to trusted analytics and practical AI. The result is clearer decisions, better service and more productive teams." image="/data-ai-hero.png" alt="Utility data specialists studying operational analytics in a control center" caption="Trusted data · practical AI · measurable value" action={{ label: "Explore applications", href: "#applications" }} />
         <section className="editorial-section editorial-capabilities" aria-labelledby="data-capabilities-title">
           <div className="editorial-section-head"><span className="stag">What we do</span><h2 id="data-capabilities-title">A foundation for the intelligent utility.</h2><p>We connect data strategy, platforms and governance to use cases with a clear business purpose.</p></div>
           <ul className="editorial-tags editorial-tags-large">{capabilities.map((item) => <li key={item}>{item}</li>)}</ul>

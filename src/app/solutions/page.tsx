@@ -58,11 +58,11 @@ export default function SolutionsPage() {
       <main id="main" className="buyer-solutions-page">
         <header className="buyer-solutions-hero">
           <div className="buyer-hero-copy">
-            <span>SAP services for utilities</span>
-            <h1>Start with the business constraint, not a technology catalogue.</h1>
+            <span>Solutions</span>
+            <h1>Find the right SAP service for your challenge.</h1>
             <p>
-              Five focused ways to reduce SAP delivery and operational risk. Choose the situation
-              closest to yours, then review the scope and expected output.
+              Explore five focused services for utilities, from system upgrades and support to
+              governance, AI and operational health. Compare the scope and expected output for each.
             </p>
             <Link href="#solution-guide" className="buyer-hero-link">
               Find the right service

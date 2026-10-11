@@ -5394,3 +5394,38 @@ button {
     min-height: 0;
   }
 }
+
+/* Compact site navigation with consistent link and action sizing. */
+.nav {
+  height: 68px;
+  padding-inline: max(4vw, calc((100vw - 1160px) / 2));
+  grid-template-columns: minmax(170px, 1fr) auto minmax(170px, 1fr);
+  gap: 22px;
+  box-shadow: 0 1px 0 rgba(15, 35, 70, 0.03);
+}
+
+.nav .logo { gap: 8px; }
+.nav .lmark { width: 36px; height: 36px; }
+.nav .logo-copy strong { font-size: 14.5px; }
+.nav .logo-copy small { font-size: 8.5px; }
+.nav .nl { gap: 22px; }
+.nav .nl a { min-height: 68px; font-size: 14px; white-space: nowrap; }
+.nav .nr .btn-p { min-height: 40px; padding: 9px 14px; font-size: 13px; }
+.nav-mobile { top: 68px; }
+.hero { padding-top: 68px; }
+
+@media (max-width: 1100px) {
+  .nav {
+    height: 64px;
+    padding-inline: 5%;
+    grid-template-columns: 1fr auto;
+  }
+  .nav .nl { display: none; }
+  .nav .nav-burger { display: flex; width: 40px; height: 40px; }
+  .nav-mobile { top: 64px; }
+  .hero { padding-top: 64px; }
+}
+
+@media (max-width: 600px) {
+  .nav .nr .btn-p { display: none; }
+}

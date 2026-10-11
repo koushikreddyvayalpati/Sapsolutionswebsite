@@ -69,13 +69,13 @@ export default function CaseStudiesPage() {
         <section className="delivery-hero">
           <div className="delivery-hero-copy">
             <span className="stag">Delivery Examples</span>
-            <h1>Evidence of controlled SAP delivery.</h1>
+            <h1>How we approach complex SAP delivery.</h1>
             <p>
-              Representative engagement patterns for utilities and regulated operations, focused on
-              the decisions, outputs and delivery controls enterprise buyers expect to see.
+              Explore representative engagement patterns for utilities and regulated operations.
+              Each example shows the decisions, controls and outputs that shape a well-run SAP program.
             </p>
             <Link href="/#contact" className="delivery-hero-link">
-              Discuss a referenceable pattern
+              Discuss a delivery approach
               <Icon name="arrow" size={14} strokeWidth={2.5} />
             </Link>
           </div>

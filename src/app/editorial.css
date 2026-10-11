@@ -1,8 +1,8 @@
 .editorial-page { background: #fff; }
-.editorial-hero { min-height: 650px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: clamp(36px, 5vw, 80px); align-items: center; padding: 132px max(5vw, calc((100vw - 1240px) / 2)) 70px; border-bottom: 1px solid #dfe5ed; background: linear-gradient(180deg, #fff 0%, #f7f9fc 100%); }
+.editorial-hero { min-height: 620px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: clamp(36px, 5vw, 80px); align-items: center; padding: 118px max(5vw, calc((100vw - 1240px) / 2)) 70px; border-bottom: 1px solid #dfe5ed; background: linear-gradient(180deg, #fff 0%, #f7f9fc 100%); }
 .editorial-hero-copy { max-width: 680px; }
-.editorial-hero h1 { margin: 18px 0 24px; font-size: clamp(42px, 4.6vw, 68px); font-weight: 680; line-height: 1.06; }
-.editorial-hero-copy > p { max-width: 640px; color: #536174; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.7; }
+.editorial-hero h1 { max-width: 20ch; margin: 18px 0 24px; font-size: clamp(42px, 4.6vw, 68px); font-weight: 680; line-height: 1.06; text-wrap: balance; }
+.editorial-hero-copy > p { max-width: 65ch; color: #536174; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.7; }
 .editorial-hero .hbtn-p { display: inline-flex; align-items: center; gap: 18px; margin-top: 30px; }
 .editorial-hero-image { position: relative; min-height: 430px; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid #d7dfe9; border-radius: 8px; background: #e9eff7; box-shadow: 0 26px 70px rgba(11,18,32,.11); }
 .editorial-hero-image img, .service-explorer-photo img, .editorial-card-photo img { object-fit: cover; }
@@ -51,6 +51,7 @@
 .about-intro p + p { margin-top: 18px; }
 .about-mission { padding: 76px max(5vw, calc((100vw - 1240px) / 2)); background: #eff6ff; }
 .about-mission h2 { max-width: 1050px; margin-top: 15px; color: #172b46; font-size: clamp(30px, 3.3vw, 48px); font-weight: 650; line-height: 1.2; }
+.about-mission p { max-width: 65ch; margin-top: 18px; color: #536174; font-size: 17px; line-height: 1.7; }
 .about-difference-section .editorial-section-head { max-width: 920px; margin-bottom: 38px; }
 .about-difference-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: minmax(245px, auto); gap: 16px; }
 .about-difference-grid article { position: relative; min-width: 0; border: 1px solid #dce4ed; border-radius: 9px; background: linear-gradient(155deg, #fff 0%, #f8fafd 100%); box-shadow: 0 10px 28px rgba(7, 17, 31, .035); overflow: hidden; }

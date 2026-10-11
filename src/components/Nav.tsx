@@ -49,7 +49,7 @@ export default function Nav() {
         </ul>
         <div className="nr">
           <Link href="/#contact" className="btn-p">
-            Get Consultation
+            Contact us
             <Icon name="arrow" size={14} strokeWidth={2.4} />
           </Link>
           <button
@@ -83,7 +83,7 @@ export default function Nav() {
           );
         })}
         <Link className="nav-mobile-cta" href="/#contact" onClick={() => setOpen(false)}>
-          Get Consultation
+          Contact us
           <Icon name="arrow" size={14} strokeWidth={2.4} />
         </Link>
       </nav>
