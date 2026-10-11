@@ -6,7 +6,9 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { label: "Services", href: "/services" },
+  { label: "Data & AI", href: "/data-ai" },
   { label: "Solutions", href: "/solutions" },
+  { label: "About", href: "/about" },
   { label: "Delivery Examples", href: "/case-studies" },
 ];
 
@@ -18,7 +20,7 @@ export const TRUST_BADGES = [
   { icon: "shield", label: "Implementation Governance" },
   { icon: "pulse", label: "SAP BTP, Joule & Agentic AI" },
   { icon: "bolt", label: "SAP IS-U Expertise" },
-  { icon: "check", label: "Free POWERON Health Check" },
+  { icon: "check", label: "POWERON Health Check" },
 ] as const;
 
 export interface Service {
@@ -100,7 +102,7 @@ export const SERVICES: Service[] = [
     title: "SAP Utilities Health Assessment",
     description:
       "Find stability, process and upgrade risks across SAP IS-U and meter-to-cash before they become production issues.",
-    chips: ["Free Health Check", "SAP IS-U", "Meter to Cash", "Risk Roadmap"],
+    chips: ["Health Check", "SAP IS-U", "Meter to Cash", "Risk Roadmap"],
     href: "/services#poweron",
     image: "/sap-utilities-health-assessment.png",
     outcome: "A prioritized, practical improvement roadmap built around utilities operations and SAP best practices.",
@@ -115,7 +117,7 @@ export const SERVICES: Service[] = [
 
 export const POWERON = {
   name: "POWERON",
-  eyebrow: "Free SAP Utilities Health Check",
+  eyebrow: "POWERON Health Check",
   title: "See what is putting your SAP IS-U landscape at risk.",
   description:
     "POWERON is UtilityNexus.ai's structured health assessment for utilities. It reviews the decisions, workarounds and processing errors that accumulate after go-live, then turns the findings into a prioritized stabilization and modernization plan.",
@@ -274,13 +276,15 @@ export const FOOTER_COLS = [
       { label: "SAP AMS", href: "/solutions#s4" },
       { label: "Implementation Governance", href: "/solutions#s1" },
       { label: "BTP + AI Agents", href: "/solutions#btp-ai" },
-      { label: "Free POWERON Health Check", href: "/services#poweron" },
+      { label: "POWERON Health Check", href: "/services#poweron" },
     ],
   },
   {
     title: "Company",
     links: [
       { label: "Why Us", href: "/#why-us" },
+      { label: "About", href: "/about" },
+      { label: "Data & AI", href: "/data-ai" },
       { label: "Delivery Examples", href: "/case-studies" },
       { label: "Solutions", href: "/solutions" },
       { label: "Contact", href: "/#contact" },

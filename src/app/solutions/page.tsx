@@ -136,7 +136,7 @@ export default function SolutionsPage() {
                 <figcaption>{String(index + 1).padStart(2, "0")}</figcaption>
               </figure>
               <div className="buyer-service-copy">
-                <span>{service.isNew ? "Free initial assessment" : "Focused SAP service"}</span>
+                <span>{service.isNew ? "POWERON Health Check" : "Focused SAP service"}</span>
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
                 <div className="buyer-outcome">

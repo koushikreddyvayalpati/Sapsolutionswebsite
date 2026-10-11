@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
           <div className="hero-btns">
             <Link href="/services#poweron" className="hbtn-p">
-              Get a Free POWERON Health Check
+              POWERON Health Check
               <Icon name="arrow" size={14} strokeWidth={2.5} />
             </Link>
             <Link href="/services" className="hbtn-s">

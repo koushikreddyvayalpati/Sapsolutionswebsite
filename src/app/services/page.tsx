@@ -1,55 +1,32 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/Footer";
-import Icon from "@/components/Icon";
 import Nav from "@/components/Nav";
-import { PowerOnAssessment, ServiceDetails } from "@/components/ServiceDetails";
+import EditorialHero from "@/components/EditorialHero";
+import ServicesExplorer from "@/components/ServicesExplorer";
+import { PowerOnAssessment } from "@/components/ServiceDetails";
+import "../editorial.css";
 
 export const metadata: Metadata = {
-  title: "SAP Services for Utilities | UtilityNexus.ai",
+  title: "Utility Technology Services | UtilityNexus.ai",
   description:
-    "ECC to S/4HANA upgrades, SAP AMS resources, implementation governance, SAP BTP and AI agents, and the free POWERON SAP IS-U health assessment.",
+    "Explore utility-focused SAP transformation, customer and billing, asset and work management, cloud integration, digital transformation and managed services.",
 };
 
 export default function ServicesPage() {
   return (
     <>
       <Nav />
-      <main id="main" className="services-page">
-        <section className="page-hero light-hero services-hero">
-          <div className="services-hero-copy">
-            <span className="stag">UtilityNexus.ai Services</span>
-            <h1>Focused SAP services for utilities and regulated operations.</h1>
-            <p>
-              Move from ECC to S/4HANA, strengthen application support, govern implementation
-              delivery, shape BTP and AI-agent adoption or uncover SAP IS-U risks with POWERON.
-            </p>
-            <div className="services-hero-actions">
-              <Link href="#poweron" className="hbtn-p">
-                Get the Free POWERON Health Check
-                <Icon name="arrow" size={14} strokeWidth={2.5} />
-              </Link>
-              <Link href="/#contact" className="hbtn-s">
-                Talk to a Specialist
-              </Link>
-            </div>
-          </div>
-          <figure className="services-hero-visual">
-            <Image
-              src="/sap-s4hana-upgrade-planning.png"
-              fill
-              priority
-              sizes="100vw"
-              alt="SAP consultants and enterprise leaders reviewing an S/4HANA transformation roadmap"
-            />
-            <figcaption>
-              <span>SAP services for regulated operations</span>
-              <span>Upgrade · support · govern · BTP + AI · assess</span>
-            </figcaption>
-          </figure>
-        </section>
-        <ServiceDetails />
+      <main id="main" className="editorial-page services-page">
+        <EditorialHero
+          eyebrow="Services"
+          title="Transforming utilities through technology, intelligence and industry expertise."
+          description="UtilityNexus helps utilities navigate complex technology transformations, from strategy and implementation to integration, optimization and ongoing support. Our services bring together utility industry expertise with SAP, cloud, data, AI and enterprise technologies."
+          image="/services-transformation-hero.png"
+          alt="Utility consultants and operations leaders reviewing a transformation roadmap"
+          caption="Strategy · implementation · integration · operations"
+          action={{ label: "Explore our services", href: "#capabilities" }}
+        />
+        <ServicesExplorer />
         <PowerOnAssessment />
       </main>
       <Footer />

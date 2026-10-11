@@ -124,7 +124,7 @@ export default function ServiceShowcase() {
           <span className="service-stage-index">
             {String(activeIndex + 1).padStart(2, "0")} / {String(SERVICES.length).padStart(2, "0")}
           </span>
-          {service.isNew && <span className="service-stage-badge">Free assessment</span>}
+          {service.isNew && <span className="service-stage-badge">POWERON Health Check</span>}
         </div>
 
         <div className="service-stage-copy">

@@ -70,7 +70,7 @@ export function VisualProof() {
   return (
     <section className="visual-proof" aria-labelledby="visual-proof-title">
       <div className="vp-copy">
-        <span className="stag">Free POWERON Health Check</span>
+        <span className="stag">POWERON Health Check</span>
         <h2 id="visual-proof-title">
           Find <span className="no-wrap">SAP IS-U</span> risk before it reaches customers.
         </h2>
@@ -84,7 +84,7 @@ export function VisualProof() {
           <span>Upgrade readiness</span>
         </div>
         <Link href="/services#poweron" className="vp-link">
-          Request the free health check
+          Request the POWERON Health Check
           <Icon name="arrow" size={14} strokeWidth={2.5} />
         </Link>
       </div>

@@ -91,7 +91,7 @@ export function PowerOnAssessment() {
         </ul>
         <div className="poweron-actions">
           <Link href="/#contact" className="hbtn-p">
-            Request the Free Health Check
+            Request the POWERON Health Check
             <Icon name="arrow" size={14} strokeWidth={2.5} />
           </Link>
           <span>No generic scorecard. You receive prioritized findings and next actions.</span>
